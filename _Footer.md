@@ -1,0 +1,1 @@
+![Statistics](http://i.mcstats.org/BetonQuest/Global+Statistics.borderless.png)
