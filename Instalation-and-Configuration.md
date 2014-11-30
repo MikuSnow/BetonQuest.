@@ -1,9 +1,5 @@
 # Instalation and Configuration
 
-## Compiling the plugin
-
-You need to have JDK for version 1.7 or above, Git and Maven installed. Clone BetonQuest repository to some directory and issue command `mvn package` inside it. The .jar package should appear in _target_ directory.
-
 ## Installation
 
 First of all you should install Citizens plugin. You can find it on it’s [dev.bukkit.org](http://dev.bukkit.org/bukkit-plugins/citizens/) page. It's not required, you can use NPCs made from block but it's less immersive. Download the BetonQuest plugin, place .jar file in your plugins folder, start and stop the server. BetonQuest generated configuration files. If you want to use MySQL for data storage then open config.yml and fill your database informations. If not, just leave these fields blank, the plugin will use SQLite instead. Now you can start the server. Now let's start with learning basics of BetonQuest's mechanics.
