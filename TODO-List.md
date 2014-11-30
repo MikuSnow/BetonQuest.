@@ -1,5 +1,6 @@
 # TODO List
 
+* [ ] Event command (for firing events)
 * [ ] Conversations divided into multiple files (one per conversation)
 * [ ] Regex checking of condition/event/objective instruction string syntax (to easily catch every error)
 * [ ] Location for Block and Action objectives (this would check location of a block, unlike location conditions which checks player's location)
