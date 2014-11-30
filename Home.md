@@ -12,5 +12,5 @@ BetonQuest also has simple API for adding new types of objectives, conditions an
 
 With RPG style conversations, in-book self updating journal and easy way of adding new functionality, BetonQuest creates the environment in which one could replicate advanced role-playing games like Skyrim or KotOR.
 
-TL;DR - If you just skipped to this part, give up. You probably don't want to read stuff, thus you won't be able to understand the configuration of quests and conversations. It’s not so easy and predictable as in other "RPG quests" plugins.
+**TL;DR** - If you just skipped to this part, give up. You probably don't want to read stuff, thus you won't be able to understand the configuration of quests and conversations. It’s not so easy and predictable as in other "RPG quests" plugins.
 
