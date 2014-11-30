@@ -3,6 +3,7 @@ Content
 
 * [Home](https://github.com/Co0sh/BetonQuest/wiki)
 * [Instalation and Configuration](https://github.com/Co0sh/BetonQuest/wiki/Instalation-and-Configuration)
+* [Commands and Permissions](https://github.com/Co0sh/BetonQuest/wiki/Commands-and-permissions)
 * [Creating Conversations](https://github.com/Co0sh/BetonQuest/wiki/Creating-Conversations)
 * [Conditions, events and objectives](https://github.com/Co0sh/BetonQuest/wiki/Conditions,-events-and-objectives)
 * [Other important stuff](https://github.com/Co0sh/BetonQuest/wiki/Other-important-stuff)
