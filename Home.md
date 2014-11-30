@@ -27,5 +27,3 @@ Useful pages
 * Images
 * API for developers
 * TODO List
-
-![Statistics](http://i.mcstats.org/BetonQuest/Global+Statistics.borderless.png)
