@@ -1,6 +1,7 @@
 # TODO List
 
 * [X] Event command (for firing events)
+* [ ] Set Block event (mainly for activating redstone)
 * [ ] Conversations divided into multiple files (one per conversation)
 * [ ] Regex checking of condition/event/objective instruction string syntax (to easily catch every error)
 * [ ] Location for Block and Action objectives (this would check location of a block, unlike location conditions which checks player's location)
