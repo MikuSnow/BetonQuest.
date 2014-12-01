@@ -12,3 +12,4 @@ Content
 * [Objectives List](https://github.com/Co0sh/BetonQuest/wiki/Objectives-List)
 * [API for developers](https://github.com/Co0sh/BetonQuest/wiki/API-for-developers)
 * [TODO List](https://github.com/Co0sh/BetonQuest/wiki/TODO-List)
+* [Images](https://github.com/Co0sh/BetonQuest/wiki/Images)
