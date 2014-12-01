@@ -9,5 +9,6 @@
 * [ ] Book reading objective (it could start quests, just like in Skyrim)
 * [ ] Potion brewing objective (kinda hard to do or I'm stupid) (yeah, probably the second one...)
 * [ ] Put item in chest objective (for crazy Skyrim-like delivery quests (eg. food for Greybeards))
+* [ ] Logging errors to the file
 * [ ] Updater (why not?)
 * [ ] GUI or in-game, chat-based editor (it will take a while)
