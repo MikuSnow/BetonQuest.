@@ -1,10 +1,10 @@
 # TODO List
 
-* [ ] NPCs from blocks shoud be available with Citizens enabled
-* [ ] Fix conversations manually starting again even though already started by an event
+* [ ] Conversations divided into multiple files (one per conversation)
+* [X] NPCs from blocks shoud be available with Citizens enabled
+* [X] Fix conversations manually starting again even though already started by an event
 * [X] Event command (for firing events)
 * [ ] Set Block event (mainly for activating redstone)
-* [ ] Conversations divided into multiple files (one per conversation)
 * [ ] Regex checking of condition/event/objective instruction string syntax (to easily catch every error)
 * [ ] Location for Block and Action objectives (this would check location of a block, unlike location conditions which checks player's location)
 * [ ] Optionally requiring specific responses in chat during conversations (for riddles and stuff)
