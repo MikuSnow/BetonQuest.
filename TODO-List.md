@@ -1,5 +1,7 @@
 # TODO List
 
+* [ ] NPCs from blocks shoud be available with Citizens enabled
+* [ ] Fix conversations manually starting again even though already started by an event
 * [X] Event command (for firing events)
 * [ ] Set Block event (mainly for activating redstone)
 * [ ] Conversations divided into multiple files (one per conversation)
