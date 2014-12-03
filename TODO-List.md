@@ -4,8 +4,8 @@
 * [X] NPCs from blocks shoud be available with Citizens enabled
 * [X] Fix conversations manually starting again even though already started by an event
 * [X] Event command (for firing events)
-* [ ] Kill NPC objective (at budopey's request)
-* [ ] Set Block event (mainly for activating redstone)
+* [X] Kill NPC objective (at budopey's request)
+* [X] Set Block event (mainly for activating redstone)
 * [ ] Regex checking of condition/event/objective instruction string syntax (to easily catch every error)
 * [ ] Location for Block and Action objectives (this would check location of a block, unlike location conditions which checks player's location)
 * [ ] Optionally requiring specific responses in chat during conversations (for riddles and stuff)
