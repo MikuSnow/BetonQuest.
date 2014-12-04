@@ -11,7 +11,7 @@
 * [ ] Optionally requiring specific responses in chat during conversations (for riddles and stuff)
 * [X] Unified item list in separate file (these would be referenced in several events and conditions)
 * [X] Book title and text support, potion types support (in that item list)
-* [ ] Book reading objective (it could start quests, just like in Skyrim)
+* [X] Book reading objective (it could start quests, just like in Skyrim) (Modified Action objective to make it possible with help of Hand condition which now can identify different books)
 * [ ] Potion brewing objective (kinda hard to do or I'm stupid) (yeah, probably the second one...)
 * [ ] Put item in chest objective (for crazy Skyrim-like delivery quests (eg. food for Greybeards))
 * [ ] Logging errors to the file
