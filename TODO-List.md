@@ -1,5 +1,6 @@
 # TODO List
 
+* [ ] Item command that transforms your currently held item into an items.yml entry
 * [X] Conversations divided into multiple files (one per conversation)
 * [X] NPCs from blocks shoud be available with Citizens enabled
 * [X] Fix conversations manually starting again even though already started by an event
