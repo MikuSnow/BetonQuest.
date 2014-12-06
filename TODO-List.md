@@ -1,7 +1,8 @@
 # TODO List
 
-The changes marked as done will appear in the next version.
+The changes marked as done will appear in the next version. The ones on top describe what I am working on and the rest needs to be done.
 
+* [ ] Updating language files
 * [ ] Bugfixes for v1.4
 * [X] Item command that transforms your currently held item into an items.yml entry
 * [X] Conversations divided into multiple files (one per conversation)
