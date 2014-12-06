@@ -8,9 +8,9 @@ Item in Inventory
 
 **Desc**: This event is met only when player has defined item in his inventory.
 
-**Instruction**: There can be 6 attributes besides `--inverted`: `type:` is required, types can be found in a link from Block objective. `data:` is data value, e.g. for different wood types. Default (if omitted) is 0. `amount:` is amount of items the player must have (default is 1), `name:` is the display name of an item (not required), `lore:` is this purple text in item’s tooltip (also not required). The lines must be separated by a semicolon, and all spaces converted to `_`. Last attribute `enchants:` is a list of enchantments separated by commas, with their level (required) after a colon.
+**Instruction**: There can be 2 attributes besides `--inverted`: `item:` is required, and represents an item defined in items.yml. `amount:` is amount of items the player must have (default is 1).
 
-**Example**: `item type:DIAMOND_SWORD data:0 amount:1 enchants:DAMAGE_ALL:3,KNOCKBACK:1 name:Slasher lore:Made_of;pure_concrete;mixed_with_love --inverted`
+**Example**: `item item:emerald amount:1 --inverted`
 
 Item in Hand
 ----------------
@@ -21,7 +21,7 @@ Item in Hand
 
 **Instruction**: Just like the above but without `amount:` attribute.
 
-**Example**: `hand type:DIAMOND_SWORD enchants:DAMAGE_ALL:3 name:Slasher`
+**Example**: `hand item:sword`
 
 Alternative
 ----------------

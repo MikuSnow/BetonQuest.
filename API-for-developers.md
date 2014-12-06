@@ -24,3 +24,10 @@ Objectives are the most complicated because they use event handlers and must be 
 Every accepted thing in your objective must be also verified with boolean checkConditions(); method. You don't want your objective ignoring all conditions, do you? When the objective is completed you should unregister all listeners and invoke completeObjective(); method. It will fire all events for you, so you don't have to do this manually.
 
 Objectives are registered the same way as conditions and events, only using registerObjective(String name, Class<? extends Objective>); method.
+
+Additional notes
+------------------------
+
+If you need to use player's ID (in code refered to as playerID) you should use PlayerConverter class and it's static methods. PlayerID is not a nick nor UUID. It is both at the same time, depending on how user will configure the plugin. That's why you can't use anything like Bukkit.getPlayer(playerID)
+
+If you need to generate pages for a book from a single String please use JournalBook.pagesFromString(String string), which returns a List of string cut to proper length.

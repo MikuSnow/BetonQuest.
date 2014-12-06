@@ -116,22 +116,22 @@ Give Items
 
 **Name**: give
 
-**Desc**: Gives player items, exactly as /give command. Support custom names, lore and enchantments.
+**Desc**: Gives player a predefined item.
 
-**Instruction**: Defining instruction string is the same as in Item condition.
+**Instruction**: First argument is item's name (defined in items.yml) and second is `amount:` followed by an integer.
 
-**Example**: `give type:EMERALD amount:120 lore:Beton;reward name:Money`
+**Example**: `give emerald amount:120`
 
 Take Items
 ---------------
 
 **Name**: take
 
-**Desc**: Removes items from player’s inventory. It should be used with proper condition. Beware using this in conversations on selecting an option, as the player can drop items before selecting the option and pickup them after the event fires. Always validate it on NPC’s reaction!
+**Desc**: Removes items from player’s inventory. Don't use it with player options in conversations, the player can drop items before selecting the option and pickup them after the event fires. Always validate it on NPC’s reaction!
 
 **Instruction**: Defining instruction string is the same as in give event.
 
-**Example**: `take type:EMERALD amount:120 lore:Beton;reward name:Money`
+**Example**: `take emerald amount:120`
 
 Potion Effect
 ---------------
@@ -209,3 +209,14 @@ Folder
 **Instruction**: There are two arguments, `delay:` and `events:`. Delay is a number of seconds and it's optional (leaving it blank is the same as `events:0`, and events is a list of event IDs separated by colons.
 
 **Example**: `folder delay:5 events:event1,event2,event3`
+
+Set Block
+-------------------
+
+**Name**: setblock
+
+**Desc**: Sets a block at given location to specified material. Useful for triggering redstone contraptions.
+
+**Instruction**: There are three arguments. `block:` is required, and should be followed by material's name ([List of materials](http://jd.bukkit.org/rb/apidocs/org/bukkit/Material.html)). `loc:` is a location written like `100;200;300;world` and is also required. Last, optional is `data:` with an integer, which defines block's data value. Default is 0.
+
+**Example**: `setblock block:REDSTONE_BLOCK loc:100;200;300;world`

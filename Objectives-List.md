@@ -99,3 +99,14 @@ Delay
 **Instruction**: First argument is `delay:` and it accepts number of minutes. The rest is just like in other objectives.
 
 **Example**: `delay delay:1440 events:event1,event2 tag:delay`
+
+NPC Kill
+-----------------
+
+**Name**: npckill
+
+**Desc**: NPC Kill objective requires the player to kill an NPC with the given ID. You can also define how many times an NPC has to be killed.
+
+**Instruction**: Right after objective's name there must be na ID of the NPC. You can also add an amount by `amount:`.
+
+**Example**: `npckill 16 amount:3 events:reward tag:kill`
