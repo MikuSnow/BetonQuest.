@@ -1,6 +1,6 @@
 # TODO List
 
-The changes marked as done will appear in the next version.
+The changes marked as done will appear in the next version. The ones on top describe what I am working on and the rest needs to be done.
 
 * [ ] Regex checking of condition/event/objective instruction string syntax (to easily catch every error)
 * [ ] Optionally requiring specific responses in chat during conversations (for riddles and stuff)
