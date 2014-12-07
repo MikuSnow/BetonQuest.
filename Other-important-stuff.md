@@ -34,8 +34,6 @@ If you want to use items in Give and Take events or Item and Hand conditions you
 
 Examples:
 
-``
-sword: 'DIAMOND_SWORD data:0 name:Slasher lore:Very_powerful;Forged_by_Endermen enchants:DAMAGE_ALL:5,KNOCKBACK:2'
-potion: 'POTION name:Poison lore:Will_kill_you_in_10_secods_flat effects:HARM:10:0'
-book: 'WRITTEN_BOOK title:Book_about_everything author:Notch text:The_text_goes_here'
-``
+    sword: 'DIAMOND_SWORD data:0 name:Slasher lore:Very_powerful;Forged_by_Endermen enchants:DAMAGE_ALL:5,KNOCKBACK:2'
+    potion: 'POTION name:Poison lore:Will_kill_you_in_10_secods_flat effects:HARM:10:0'
+    book: 'WRITTEN_BOOK title:Book_about_everything author:Notch text:The_text_goes_here'
