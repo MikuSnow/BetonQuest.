@@ -6,7 +6,7 @@ Global locations are locations at which events can fire. They are defined as nor
 
 ## Journal
 
-The journal is a book in which all your adventures are described. You can obtain it by typing **/q journal** command. You cannot put it into chests, item frames and so on. If you ever feel the need to get rid of your journal, try to drop it, it will dissapear. The journal is updated with journal event, and the text inside is defined in _journal.yml_ config file.
+The journal is a book in which all your adventures are described. You can obtain it by typing **/q journal** command. You cannot put it into chests, item frames and so on. If you ever feel the need to get rid of your journal, try to drop it, it will dissapear. The journal is updated with journal event, and the text inside is defined in _journal.yml_ config file. If you update these texts, all players' journals will reflect changes (after next journal update or **/q journal** command of course).
 
 ## Tags
 
