@@ -206,7 +206,7 @@ Folder
 
 **Desc**: It's something like a container for multiple events. You can use it to clarify your code. It also features optional delay measured in seconds. Beware though, it's not persistent. If the player leaves the game before that time events will not fire. You probably shouldn't use it to give them items or tags.
 
-**Instruction**: There are two arguments, `delay:` and `events:`. Delay is a number of seconds and it's optional (leaving it blank is the same as `events:0`, and events is a list of event IDs separated by colons.
+**Instruction**: There are two arguments, `delay:` and `events:`. Delay is a number of seconds and it's optional (leaving it blank is the same as `delay:0`, and events is a list of event IDs separated by colons.
 
 **Example**: `folder delay:5 events:event1,event2,event3`
 
