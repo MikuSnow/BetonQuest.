@@ -2,7 +2,7 @@
 
 The changes marked as done will appear in the next version. The ones on top describe what I am working on and the rest needs to be done.
 
-* [ ] Creating objectives directly from event, without referencing the objectives.yml file (it is unneeded complication as there can always be exactly one event for every objective)
+* [X] Creating objectives directly from event, without referencing the objectives.yml file (it is unneeded complication as there can always be exactly one event for every objective)
 * [X] Modify command event to accept multiple commands
 * [X] Add support for new lines in books (journal.yml, items.yml)
 * [X] Add several aliases for commands, it looks like /q and /j are popular among other developers...
