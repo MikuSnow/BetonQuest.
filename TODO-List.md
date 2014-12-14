@@ -2,10 +2,10 @@
 
 The changes marked as done will appear in the next version. The ones on top describe what I am working on and the rest needs to be done.
 
-* [ ] Modify command event to accept multiple commands
-* [ ] Add support for new lines in books (journal.yml, items.yml)
-* [ ] Add several aliases for commands, it looks like /q and /j are popular among other developers...
 * [ ] Creating objectives directly from event, without referencing the objectives.yml file (it is unneeded complication as there can always be exactly one event for every objective)
+* [X] Modify command event to accept multiple commands
+* [X] Add support for new lines in books (journal.yml, items.yml)
+* [X] Add several aliases for commands, it looks like /q and /j are popular among other developers...
 * [ ] Denizen support (mainly for firing events but I'll try to add checking conditions in scripts (useful for points and tags))
 * [ ] MythicMobs support (and mob name support in MobKill objective, why not?)
 * [ ] Regex checking of condition/event/objective instruction string syntax (to easily catch every error)
