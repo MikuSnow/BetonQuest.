@@ -2,8 +2,8 @@
 
 The changes marked as done will appear in the next version. The ones on top describe what I am working on and the rest needs to be done.
 
-* [ ] Sounds for journal and conversations
 * [ ] Denizen support (mainly for firing events but I'll try to add checking conditions in scripts (useful for points and tags))
+* [X] Sounds for journal and conversations
 * [X] Clickable answers in chat (with tellraw)
 * [X] MythicMobs support (and mob name support in MobKill objective, why not?)
 * [X] Creating objectives directly from event, without referencing the objectives.yml file (it is unneeded complication as there can always be exactly one event for every objective)
