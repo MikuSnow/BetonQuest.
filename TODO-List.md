@@ -2,7 +2,9 @@
 
 The changes marked as done will appear in the next version. The ones on top describe what I am working on and the rest needs to be done.
 
-* [ ] Denizen support (mainly for firing events but I'll try to add checking conditions in scripts (useful for points and tags))
+* [ ] Bugfixes for 1.5 version
+* [X] Event command accepting players
+* [X] Vault support (permission event, money event/condition)
 * [X] Sounds for journal and conversations
 * [X] Clickable answers in chat (with tellraw)
 * [X] MythicMobs support (and mob name support in MobKill objective, why not?)
@@ -17,3 +19,4 @@ The changes marked as done will appear in the next version. The ones on top desc
 * [ ] Put item in chest objective (for crazy Skyrim-like delivery quests (eg. food for Greybeards))
 * [ ] Logging errors to the file
 * [ ] GUI or in-game, chat-based editor (it will take a while)
+* [ ] Denizen support (may take a long time, I hate Denizen...)
