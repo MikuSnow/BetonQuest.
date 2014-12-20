@@ -2,7 +2,7 @@
 
 ## Global locations
 
-Global locations are locations at which events can fire. They are defined as normal location objectives and will fire when the player is in range of that location. These objectives can be used for starting location specific quest (such as encountering a dungeon and checking it out), teleporting players to arenas, this kind of stuff. They use tags to tell which player has been at certain location and which hasn't. These tags follow syntax `global_<tag>`, where `<tag>` is location objective's tag, defined at the end of instruction string (eg. `global_conversation_start`, where `conversation_start` is a tag of location objective).
+Global locations are locations at which events can fire. They are defined as normal location objectives and will fire when the player is in range of that location. Global locations are active for all players, event if they don't have an active objective. They can be used for starting location specific quest (such as encountering a dungeon and checking it out), teleporting players to arenas, this kind of stuff. They use tags to tell which player has been at certain location and which hasn't. These tags follow syntax `global_<tag>`, where `<tag>` is location objective's tag, defined at the end of instruction string (eg. `global_conversation_start`, where `conversation_start` is a tag of location objective).
 
 ## Journal
 
