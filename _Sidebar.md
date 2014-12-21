@@ -10,6 +10,7 @@ Content
 * [Condition List](https://github.com/Co0sh/BetonQuest/wiki/Conditions-List)
 * [Events List](https://github.com/Co0sh/BetonQuest/wiki/Events-List)
 * [Objectives List](https://github.com/Co0sh/BetonQuest/wiki/Objectives-List)
+* [Compatibility](https://github.com/Co0sh/BetonQuest/wiki/Compatibility)
 * [API for developers](https://github.com/Co0sh/BetonQuest/wiki/API-for-developers)
 * [TODO List](https://github.com/Co0sh/BetonQuest/wiki/TODO-List)
 * [Images](https://github.com/Co0sh/BetonQuest/wiki/Images)

@@ -61,11 +61,11 @@ Objective
 
 **Name**: objective
 
-**Desc**: Creates new objective defined in objectives.yml
+**Desc**: Creates new objective for a player.
 
-**Instruction**: The first and only argument is name of objective defined in objectives.yml
+**Instruction**: This is different from other events. The only argument is a full instruction string of the objective. You just type it right after `objective`, without any quotation marks. You can find out how to write instruction strings for objectives [here](https://github.com/Co0sh/BetonQuest/wiki/Objectives-List). If you need to add `event_conditions:` do it at the end of the whole instruction string to avoid errors with parsing the objective.
 
-**Example**: `objective woodcutting`
+**Example**: `objective block LOG:2 -16 events:reward tag:beton`
 
 Delete Objective
 ---------------

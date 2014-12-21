@@ -9,11 +9,17 @@
 * **/q objectives** - shows your currently active objectives
 * **/q tags** - lists all your tags
 * **/q points** - lists all your points in all categories
-* **/q event <eventID>** - fires an event
+* **/q event <eventID> [playerName]** - fires an event (playerName is optional)
 * **/q item <itemID>** - creates an item based on what you're holding in hand
 * **/q condition <conditionID>** - shows you if you meet specified condition or not
+
+## Aliases
+
+* **/j**: bj, journal, bjournal, betonjournal
+* **/q**: bq, bquest, bquests, betonquest, betonquests, quest, quests
 
 ## Permissions
 
 * **betonquest.admin** - allows using admin commands (/q ...) and creating an NPC from blocks
 * **betonquest.journal** - allows using /j command (default for players)
+* **betonquest.conversation** - allows talking with NPCs (default for players)
