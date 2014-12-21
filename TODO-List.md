@@ -3,6 +3,8 @@
 The changes marked as done will appear in the next version. The ones on top describe what I am working on and the rest needs to be done.
 
 * [ ] Bugfixes for 1.5 version
+* [ ] Update the wiki
+* [X] Colors for journal
 * [X] Event command accepting players
 * [X] Vault support (permission event, money event/condition)
 * [X] Sounds for journal and conversations
