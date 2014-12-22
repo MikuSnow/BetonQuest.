@@ -2,8 +2,9 @@
 
 The changes marked as done will appear in the next version. The ones on top describe what I am working on and the rest needs to be done.
 
-* [ ] Some commands should be able to run from the console
 * [ ] Titles as a message about updating a journal (for 1.8)
+* [ ] Multiple tags in one event
+* [X] Some commands should be able to run from the console
 * [X] Add color codes to item's name and lore
 * [X] Fix "stop" option in conversations being hardcoded to true
 * [X] Fix NPC on unknown answer during conversations
