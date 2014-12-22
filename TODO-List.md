@@ -3,7 +3,7 @@
 The changes marked as done will appear in the next version. The ones on top describe what I am working on and the rest needs to be done.
 
 * [ ] Titles as a message about updating a journal (for 1.8)
-* [ ] Multiple tags in one event
+* [X] Multiple tags in one event
 * [X] Some commands should be able to run from the console
 * [X] Add color codes to item's name and lore
 * [X] Fix "stop" option in conversations being hardcoded to true
