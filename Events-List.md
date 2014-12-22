@@ -52,9 +52,9 @@ Tag
 
 **Desc**: This event adds (or removes) a tag to player. This, along with `--inverted` argument, is one of the most powerful tools for creating dynamic conversations.
 
-**Instruction**: The first argument after event's name must be `add` or `del`. It works as it sounds. Next goes tag string. It can't contain spaces (though _ is fine).
+**Instruction**: The first argument after event's name must be `add` or `del`. It works as it sounds. Next goes tag string. It can't contain spaces (though _ is fine). Additional tags can be added, separated by commas (without spaces).
 
-**Example**: `tag add quest_started`
+**Example**: `tag add quest_started,new_entry`
 
 Objective
 ---------------
