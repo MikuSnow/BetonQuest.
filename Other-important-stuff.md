@@ -32,8 +32,13 @@ If you want to use items in Give and Take events or Item and Hand conditions you
 
 2. Manually. Add a new line to items.yml and type there item's ID followed by a colon and space. Now the first thing you need to do is insert item's type. You can find available types [here](http://jd.bukkit.org/rb/apidocs/org/bukkit/Material.html). That's all you need for an item. Now there are some arguments you can add to make it better. `data:` is the data value (eg. for different wool colors). It should be followed by an integer. Default value is 0, so in most cases you can omit it. `name` is item's display name. All spaces should be replaced by `_`. `lore:` is item's lore. Spaces follow the same rules as in name, and new lines are added by a semicolon. `enchants:` is a list of enchants separated by command. Each enchantment has two values separated by a colon: name and level. All names can be found [here](http://jd.bukkit.org/rb/apidocs/org/bukkit/enchantments/Enchantment.html). Example of two enchantments is `enchants:DAMAGE_ALL:3,KNOCKBACK:2`. If the item is a written book you can also add `title:`, `author:` and `text:`. Spaces should be replaced by `_`, as always. The text can be divided to pages with `|` character and you can add new lines with `\n`. If the item is a potion then you can add `effects:`, where all effects are separated by commas and are build like that: `EFFECT_NAME:X:Y` where list of available effect names is [here](http://jd.bukkit.org/rb/apidocs/org/bukkit/potion/PotionEffectType.html), `X` is potion's power (1 is 1, not 2) and `Y` is duration in seconds (not ticks).
 
-Examples:
+**Examples**:
 
-    sword: 'DIAMOND_SWORD data:0 name:Slasher lore:Very_powerful;Forged_by_Endermen enchants:DAMAGE_ALL:5,KNOCKBACK:2'
+    sword: 'DIAMOND_SWORD data:0 name:Slasher lore:Very_powerful;Forged_by_Endermen
+      enchants:DAMAGE_ALL:5,KNOCKBACK:2'
     potion: 'POTION name:Poison lore:Will_kill_you_in_10_secods_flat effects:HARM:10:0'
-    book: 'WRITTEN_BOOK title:Book_about_everything author:Notch text:The_text_goes_here.|This_is_on_the_new_page.\nAnd_this_is_one_line_below.'
+    book: 'WRITTEN_BOOK title:Book_about_everything author:Notch
+      text:The_text_goes_here.|This_is_on_the_new_page.\nAnd_this_is_one_line_below.'
+
+_Note that YAML allows line breaking._
+    
