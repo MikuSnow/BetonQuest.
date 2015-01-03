@@ -1,10 +1,11 @@
 # TODO List
 
-The changes marked as done will appear in the next version. The ones on top describe what I am working on and the rest needs to be done.
+The changes marked as done will appear in the next version (v1.6). E The ones on top describe what I am working on and the rest needs to be done.
 
-* [ ] Sending normal chat messages while in conversation (with # prefix)
 * [ ] Replacing items in crafting objective
+* [X] Sending normal chat messages while in conversation (with # prefix)
 * [ ] Take, hand and item targeting stuff only without enchants/effects/etc
+* [ ] Move backup files to backup folder
 * [ ] Backpack for quest items
 * [ ] Optional chest GUI for players
 * [ ] Citizens NPCs should stop walking around when in conversation
