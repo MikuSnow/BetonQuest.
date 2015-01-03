@@ -2,6 +2,7 @@
 
 The changes marked as done will appear in the next version. The ones on top describe what I am working on and the rest needs to be done.
 
+* [ ] Sending normal chat messages while in conversation (with # prefix)
 * [ ] Replacing items in crafting objective
 * [ ] Take, hand and item targeting stuff only without enchants/effects/etc
 * [ ] Backpack for quest items
