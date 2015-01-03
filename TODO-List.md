@@ -2,9 +2,8 @@
 
 The changes marked as done will appear in the next version (v1.6). E The ones on top describe what I am working on and the rest needs to be done.
 
-* [ ] Replacing items in crafting objective
-* [X] Sending normal chat messages while in conversation (with # prefix)
 * [ ] Take, hand and item targeting stuff only without enchants/effects/etc
+* [X] Sending normal chat messages while in conversation (with # prefix)
 * [ ] Move backup files to backup folder
 * [ ] Backpack for quest items
 * [ ] Optional chest GUI for players
