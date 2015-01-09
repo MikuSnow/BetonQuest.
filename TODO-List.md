@@ -2,10 +2,11 @@
 
 The changes marked as done will appear in the next version (v1.6). E The ones on top describe what I am working on and the rest needs to be done.
 
-* [ ] Remove lag on disable (during /q reload)
+* [ ] Remove lag on /q reload (by not disabling the plugin) and add optional hard reload (with disabling)
 * [ ] Backpack for quest items
 * [X] Sending normal chat messages while in conversation (with # prefix)
 * [ ] Take, hand and item targeting stuff only without enchants/effects/etc
+* [ ] Effects for NPCs triggered with events
 * [ ] Move backup files to backup folder
 * [ ] Optional chest GUI for players
 * [ ] Citizens NPCs should stop walking around when in conversation
