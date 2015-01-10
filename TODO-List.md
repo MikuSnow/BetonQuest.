@@ -18,5 +18,5 @@ The changes marked as done will appear in the next version (v1.6). E The ones on
 * [ ] Potion brewing objective (kinda hard to do or I'm stupid) (yeah, probably the second one...)
 * [ ] Put item in chest objective (for crazy Skyrim-like delivery quests (eg. food for Greybeards))
 * [ ] Logging errors to the file, debugging
-* [ ] In-game, chat-based editor (it will take a while)
+* [ ] Web editor (it will take a while)
 * [ ] Denizen support (may take a long time, I hate Denizen...)
