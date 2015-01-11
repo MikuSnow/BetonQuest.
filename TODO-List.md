@@ -2,11 +2,12 @@
 
 The changes marked as done will appear in the next version (v1.6). E The ones on top describe what I am working on and the rest needs to be done.
 
-* [ ] Remove lag on /q reload (by not disabling the plugin) and add optional hard reload (with disabling)
-* [ ] Backpack for quest items
+* [ ] Remove lag on /q reload and add optional hard reload [#5](/Co0sh/BetonQuest/issues/5)
+* [ ] Backpack for quest items [#6](/Co0sh/BetonQuest/issues/6)
 * [X] Sending normal chat messages while in conversation (with # prefix)
 * [ ] Take, hand and item targeting stuff only without enchants/effects/etc
-* [ ] Effects for NPCs triggered with events
+* [ ] Effects for NPCs triggered with events [#2](2)
+* [ ] Integration with PlayerPoints [#4](/Co0sh/BetonQuest/issues/4)
 * [ ] Move backup files to backup folder
 * [ ] Optional chest GUI for players
 * [ ] Citizens NPCs should stop walking around when in conversation
