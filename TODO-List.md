@@ -6,7 +6,7 @@ The changes marked as done will appear in the next version (v1.6). E The ones on
 * [ ] Backpack for quest items [#6](/Co0sh/BetonQuest/issues/6)
 * [X] Sending normal chat messages while in conversation (with # prefix)
 * [ ] Take, hand and item targeting stuff only without enchants/effects/etc
-* [ ] Effects for NPCs triggered with events [#2](2)
+* [ ] Effects for NPCs triggered with events [#2](/Co0sh/BetonQuest/issues/2)
 * [ ] Integration with PlayerPoints [#4](/Co0sh/BetonQuest/issues/4)
 * [ ] Move backup files to backup folder
 * [ ] Optional chest GUI for players
