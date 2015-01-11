@@ -14,6 +14,7 @@ BetonQuest is advanced and powerful quests plugin. It doesn't follow traditional
 * Tags for storing player's progress and other information
 * Various reputation systems using Points
 * Global locations: firing events for a player when he enters specified area (without active objective)
+* Delay for events - daily quests or repeatable reward collection
 * Citizens2 NPC support
 * UUID or names
 * Multiple languages and easy translating
