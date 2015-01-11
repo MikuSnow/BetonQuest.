@@ -11,6 +11,7 @@ Content
 * [Events List](https://github.com/Co0sh/BetonQuest/wiki/Events-List)
 * [Objectives List](https://github.com/Co0sh/BetonQuest/wiki/Objectives-List)
 * [Compatibility](https://github.com/Co0sh/BetonQuest/wiki/Compatibility)
+* [Frequently Asked Questions](https://github.com/Co0sh/BetonQuest/wiki/Frequently-Asked-Questions)
 * [API for developers](https://github.com/Co0sh/BetonQuest/wiki/API-for-developers)
 * [TODO List](https://github.com/Co0sh/BetonQuest/wiki/TODO-List)
 * [Images](https://github.com/Co0sh/BetonQuest/wiki/Images)
