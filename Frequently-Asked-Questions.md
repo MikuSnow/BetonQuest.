@@ -11,6 +11,12 @@ If you have any questions please read it first. It's very likely that it has bee
 
 ***
 
+**Q**: _When I first install this plugin it gives me strange errors saying that it could not read messages.yml because of special characters being not allowed..._
+
+**A**: Your server doesn't support UTF-8 encoding. That means that you probably can't use characters like **ś**, **ł**, **¿** and others. To enable this you should add `-Dfile.encoding=UTF8` to your starting script. It's that script which you use to start your server (typically named `run.bat` on Windows and `start.sh` on Linux). There should be one line starting with `java -jar` or something like that. Add `-Dfile.encoding=UTF8` somewhere after `-jar`. If you don't have access to starting script, then ask your hosting to change that for you. It they refuse you - it's time to change the hosting. No, really, they are not professional if they won't change such a simple thing.
+
+***
+
 **Q**: _Where is a command for creating quests?_
 
 **A**: There is no such command, nor there will be. As of today you need to edit the files directly, I'm sorry. The process of writing advanced quests cannot be as easy as in simple Quests plugins, so it would be even harder to do it with commands. I am planning however to code a web-based editor, which would be run similarly to [Dynmap](http://dev.bukkit.org/bukkit-plugins/dynmap/).
