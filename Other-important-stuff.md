@@ -20,7 +20,7 @@ Points are simply points. You can earn them for doing quest, talking with NPC’
 
 There are to possibilities: you have Citizens plugin (1) or you don't have it (2).
 
-1. When you’ll create your first conversation you will need to assign it to an NPC. To do so you must know NPC's ID (which you can find out by typing commands "/npc sel" and "/npc" when standing near the NPC. Now open _npcs.yml_ config file and add a new line `'X': conversation_name`. Upon reloading the plugin your NPC will have this conversation. No need for any traits.
+1. When you’ll create your first conversation you will need to assign it to an NPC. To do so you must know NPC's ID (which you can find out by typing commands "/npc sel" and "/npc" when standing near the NPC). Now open _npcs.yml_ config file and add a new line `'X': conversation_name`. Upon reloading the plugin your NPC will have this conversation. No need for any traits.
 
 2. You need to have permission `betonquest.createnpc`. Place somewhere a block of stained clay, no matter the color. Then place a head on top of it (type doesn't matter, it must be skull). Now place a sign on the side of the clay block (it can be on it's back) and type in the first line `[NPC]`, and on the second line the ID of the conversation (case sensitive!). You have created an NPC. Now you can add levers (hands) to it and maybe even fence gate (legs). Conversation is started by right clicking it's head.
 
