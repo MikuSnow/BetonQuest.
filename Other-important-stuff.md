@@ -18,7 +18,7 @@ Points are simply points. You can earn them for doing quest, talking with NPC’
 
 ## NPCs
 
-There are to possibilities: you have Citizens plugin (1) or you don't have it (2).
+There are two possibilities: you have Citizens plugin (1) or you don't have it (2).
 
 1. When you’ll create your first conversation you will need to assign it to an NPC. To do so you must know NPC's ID (which you can find out by typing commands "/npc sel" and "/npc" when standing near the NPC). Now open _npcs.yml_ config file and add a new line `'X': conversation_name`, where X is NPC's ID, and conversation_name is a name of the file containing the conversation, without `.yml` extension. Upon reloading the plugin your NPC will have this conversation. No need for any traits.
 
