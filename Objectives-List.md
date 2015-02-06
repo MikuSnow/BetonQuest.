@@ -25,8 +25,8 @@ Mob Kill
 |**Name**| mobkill|
 |---|---|
 |**Desc**| The player must kill specified amount of mobs|
-|**Instruction**| You must specify mob type first and then amount. You can find possible mob types here: [mob types](http://jd.bukkit.org/rb/apidocs/org/bukkit/entity/EntityType.html).|
-|**Example**| `mobkill ZOMBIE 5 conditions:night tag:zombie`|
+|**Instruction**| You must specify mob type first and then amount. You can find possible mob types here: [mob types](http://jd.bukkit.org/rb/apidocs/org/bukkit/entity/EntityType.html). Additionally you can specify names for mobs with `name:Uber_Zombie`, so only killing properly named mobs counts. All `_` are replaced with spaces, so in this example you would have to kill 5 zombies with "Uber Zombie" above their heads.|
+|**Example**| `mobkill ZOMBIE 5 name:Uber_Zombie conditions:night tag:zombie`|
 
 Action
 --------------------
