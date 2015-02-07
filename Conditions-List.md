@@ -135,3 +135,12 @@ Height
 |**Desc**| This condition requires player to be below specific Y height.|
 |**Instruction**| There is only one argument, `height:`, and it should be followed by an integer or double.|
 |**Example**| `height height:16`|
+
+Armor Rating
+----------------
+
+|**Name**| rating|
+|---|---|
+|**Desc**| This one requires player to wear armor which gives him specified amount of protection (armor icons).|
+|**Instruction**| There is only one argument, `rating:`, and it should be followed by an integer. One armor rating point is equal to half armor icon in-game (10 means half of the bar filled).|
+|**Example**| `rating rating:10`|
