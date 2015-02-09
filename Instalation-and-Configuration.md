@@ -18,6 +18,8 @@ The auto updating process is safe and easy. When the next version of the plugin 
 
 Configuration files will be automatically backed up to a zip file so you never lose all your work due to an error. Then configuration will be converted to a new version. At the end the localization will be updated with new languages and the cangelog.txt file will be created.
 
-When you enter the server BetonQuest will alert you about changes and ask you to read changelog.txt file located in plugin's main directory. This way you will be always up to date with every changes made by new versions. All next versions of BetonQuest will have full compability with your current server version.
+When you enter the server BetonQuest will alert you about changes and ask you to read changelog.txt file located in plugin's main directory. This way you will be always up to date with every changes made by new versions.
+
+All next versions of BetonQuest will have full compatibility with your current version of the plugin and server. This means that after updating the plugin will work _exactly_ the same way as it did before. The changes will be visible only in configuration format or new features (e.g. in 1.6 inverting conditions will be done with prefixing their name with `!` character instead of adding `--inverted` tag; updater will automatically convert all `--inverted` tags to `!`s in you configuration files and the plugin will work as expected; your only concern is not to use `--inverted` tag in conditions anymore, but you will be informed about it by changelog.txt file).
 
 If there were any unexpected errors during an update process just download previous version, restore your configs from backup and disable autoupdating feature. Don't forget to post your error so I can fix it!
