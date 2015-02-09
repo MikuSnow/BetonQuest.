@@ -40,3 +40,9 @@ If you have any questions please read it first. It's very likely that it has bee
 **A**: Conversations are not linked to an NPC through names, as you can have multiple Innkeepers. You need to connect them with their ID using "npcs.yml" file. Read [this](https://github.com/Co0sh/BetonQuest/wiki/Other-important-stuff#npcs).
 
 ***
+
+**Q**: _Where are development builds?_
+
+**A**: This isn't a frequent question, but I guess it's somewhat important for some people. This plugin does not have development builds because of its structure. There are a lot of changes to the configuration format as the plugin changes, and releasing development builds would a) create chaos in configuration updating process or b) require you to do changes manually. If you _really_ need some new feature which is already written then you can compile the plugin from source (or ask me if you don't know how / don't want to do it for some other reason). You should however revert your configuration to previous version before updating the plugin again or it won't be autoupdated! In that case disabling autoupdater would be a good idea.
+
+***
