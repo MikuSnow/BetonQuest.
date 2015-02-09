@@ -13,5 +13,5 @@ Content
 * [Compatibility](https://github.com/Co0sh/BetonQuest/wiki/Compatibility)
 * [Frequently Asked Questions](https://github.com/Co0sh/BetonQuest/wiki/Frequently-Asked-Questions)
 * [Info for developers](https://github.com/Co0sh/BetonQuest/wiki/Info-for-developers)
-* [TODO List](https://github.com/Co0sh/BetonQuest/wiki/TODO-List)
+* [Contributing](https://github.com/Co0sh/BetonQuest/wiki/Contributing)
 * [Images](https://github.com/Co0sh/BetonQuest/wiki/Images)
