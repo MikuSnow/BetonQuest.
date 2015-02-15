@@ -16,11 +16,12 @@ Found a bug? Great, create new [issue](https://github.com/Co0sh/BetonQuest/issue
 
 If you know Java and Bukkit you can take some issue and create pull request. Just let me know and remember these few things:
 
-* Use only spaces for indentation. Two spaces instead of regular tab (I'm rewriting all the code so it fits all these requirements).
-* Wrap your code at 100th column (up to 10 characters over is OK though).
+* The contributed code must be well tested and working.
+* Use only spaces for indentation: 4 spaces instead of regular tab.
+* Wrap your code at 100th column (most of the code should be wrapped).
 * Comment everything so the code is easy to understand for everyone.
 * Use block comments to document classes, methods and fields.
-* Case statements should be indented with two more spaces than a switch statement!
+* Case statements should be indented with 4 more spaces than a switch statement!
 
 ## Positive feedback
 
