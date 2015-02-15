@@ -39,3 +39,5 @@ BetonQuest has a simple API for adding new types of objectives, conditions and e
 _As of 1.2 BetonQuest uses Metrics system to send anonymous data to [McStats.org](http://mcstats.org/plugin/BetonQuest). You can disable it by setting "metrics" to false in configuration file._
 
 _As of 1.4 BetonQuest features auto-updater. In 1.4 it's disabled by default. In 1.5 it's enabled by default. You can enable/disable this by setting "autoupdate" to true/false in configuration file. It's 100% safe, as all downloaded updates will be approved by Bukkit staff. Additionally the plugin will backup all your data before each update and create changelog file just for you. You will also receive a notification about the update when you join the server._
+
+_The most recent development build of BetonQuest can be acquired [here](http://betoncraft.pl/downloads/BetonQuest.jar). This build has not been approved by the BukkitDev staff and may contain a lot of bugs. **Use it at your own risk!** It is automatically updated every time someone pushes new code to GitHub repository._
