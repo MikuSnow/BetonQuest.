@@ -25,7 +25,7 @@ If you have any questions please read it first. It's very likely that it has bee
 
 **Q**: _Would you add X feature?_
 
-**A**: Check again if it's not already added. Really, go and check it [here](https://github.com/Co0sh/BetonQuest/wiki#features). I have already got 6 such requests, 3 of them where about MySQL support (which was by the way implemented right after starting the development :stuck_out_tongue_closed_eyes:). If there is no such feature, and it doesn't involve PvP in any way then I can add it.
+**A**: Check again if it's not already added. I have already got 6 such requests, 3 of them were about MySQL support (which was by the way implemented right after starting the development). If there is no such feature, and it doesn't involve PvP in any way then I can add it.
 
 ***
 
@@ -41,8 +41,3 @@ If you have any questions please read it first. It's very likely that it has bee
 
 ***
 
-**Q**: _Where are development builds?_
-
-**A**: This isn't a frequent question, but I guess it's somewhat important for some people. This plugin does not have development builds because of its structure. There are a lot of changes to the configuration format as the plugin changes, and releasing development builds would a) create chaos in configuration updating process or b) require you to do changes manually. If you _really_ need some new feature which is already written then you can compile the plugin from source (or ask me if you don't know how / don't want to do it for some other reason). You should however revert your configuration to previous version before updating the plugin again or it won't be autoupdated! In that case disabling autoupdater would be a good idea.
-
-***

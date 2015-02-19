@@ -1,4 +1,4 @@
-![Logo](http://i.imgur.com/Gy9ORlk.png)
+![Logo](./logo.png)
 
 BetonQuest is advanced and powerful quests plugin. It doesn't follow traditional convention, where "quest" is a closed structure object, which can have a set of tasks, events and rewards on completion. Instead, BetonQuest introduces the net of objectives which can under certain conditions trigger events, start new objectives or change NPC's attitude to the player. Of course grouping this all together and saying "this group is a quest" is still possible.
 
@@ -10,7 +10,7 @@ BetonQuest is advanced and powerful quests plugin. It doesn't follow traditional
 * Multiple choice conversations with NPCs
 * No immersion breaking interface elements
 * Journal in a book
-* Item checks are considering everything, even text in books
+* Item checks are considering almost everything, even text in books
 * Tags for storing player's progress and other information
 * Various reputation systems using Points
 * Global locations: firing events for a player when he enters specified area (without active objective)
@@ -20,6 +20,7 @@ BetonQuest is advanced and powerful quests plugin. It doesn't follow traditional
 * Multiple languages and easy translating
 * API for creating your own events, conditions and objectives
 * SQLite and MySQL support
+* Configuration and database backups
 * Automatic updater 
 
 ## Description

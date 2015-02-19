@@ -12,11 +12,18 @@
 * **/q event \<eventID\> [playerName]** - fires an event (playerName is optional)
 * **/q item \<itemID\>** - creates an item based on what you're holding in hand
 * **/q condition \<conditionID\>** - shows you if you meet specified condition or not
+* **/q backup** - creates a backup of configuration files and database; can be used only on empty server, from the console
 
 ## Aliases
 
 * **/j**: bj, journal, bjournal, betonjournal
 * **/q**: bq, bquest, bquests, betonquest, betonquests, quest, quests
+    * **objectives**: o, obj, objective
+    * **tags**: t, tag
+    * **points**: p, point
+    * **event**: e, events
+    * **condition**: c, conditions
+    * **item**: i, items
 
 ## Permissions
 

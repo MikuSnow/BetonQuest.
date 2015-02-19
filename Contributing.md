@@ -16,7 +16,7 @@ Found a bug? Great, create new [issue](https://github.com/Co0sh/BetonQuest/issue
 
 If you know Java and Bukkit you can take some issue and create pull request. Just let me know and remember these few things:
 
-* The contributed code must be well tested and working.
+* The contributed code must be well tested and working (you don't say?)
 * Use only spaces for indentation: 4 spaces instead of regular tab.
 * Wrap your code at 100th column (most of the code should be wrapped).
 * Comment everything so the code is easy to understand for everyone.
