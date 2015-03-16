@@ -14,7 +14,7 @@ To complete this objective player must break or place specified amount of blocks
 
 ## Mob Kill: `mobkill`
 
-The player must kill specified amount of mobs You must specify mob type first and then amount. You can find possible mob types here: [mob types](http://jd.bukkit.org/rb/apidocs/org/bukkit/entity/EntityType.html). Additionally you can specify names for mobs with `name:Uber_Zombie`, so only killing properly named mobs counts. All `_` are replaced with spaces, so in this example you would have to kill 5 zombies with "Uber Zombie" above their heads.
+The player must kill specified amount of mobs You must specify mob type first and then amount. You can find possible mob types here: [mob types](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html). Additionally you can specify names for mobs with `name:Uber_Zombie`, so only killing properly named mobs counts. All `_` are replaced with spaces, so in this example you would have to kill 5 zombies with "Uber Zombie" above their heads.
 
 **Example** `mobkill ZOMBIE 5 name:Uber_Zombie conditions:night tag:zombie`
 
@@ -53,3 +53,15 @@ To complete this objective player must tame some amount of mobs. valid mob types
 This objective is just a long, persistent delay for firing events. It will run only after certain amount of time (measured in minutes) and only when player is online and meets all conditions. If a player is offline at that time it will just wait for them to log in. It is not 100% accurate though, as it can run up to a minute after the required amount of time. You should use it for example to delete tags so the player can complete quests multiple times. First argument is `delay:` and it accepts number of minutes. The rest is just like in other objectives.
 
 **Example** `delay delay:1440 events:!event1,event2 tag:delay`
+
+## Arrow Shooting: `arrow`
+
+To complete this objective the player needs to shoot the arrow into the target. There is only one argument, location of the target and precision: `100.5;200.5;300.5;world;1.1`, where the last number (1.1 in this case) is precision. Note that the position of an arrow after hit is on the wall of a _full_ block, which means that shooting not full blocks (like heads) won't give accurate results.
+
+**Example** `arrow 100.5;200.5;300.5;world;1.1 events:reward conditions:correct_player_position tag:archery`
+
+## Experience: `experience`
+
+This objective can by completed by reaching specified level (default Minecraft experience, whole levels). The conditions are checked when the player levels up, so if they are not met the first time, the player will have to meet them and levelup again. Instruction string consists only from integer - level to reach.
+
+**Example** `experience 25`

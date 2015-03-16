@@ -68,7 +68,7 @@ The armor condition requires player to wear given armor type, optionally with en
 
 ## Potion Effect: `effect`
 
-To meet this condition player must be under specified potion effect. There is only one argument, `type:`, and it takes values from this page: [potion types](https://github.com/Co0sh/Bukkit-JavaDoc/blob/master/src/main/java/org/bukkit/potion/PotionEffectType.java).
+To meet this condition player must be under specified potion effect. There is only one argument, `type:`, and it takes values from this page: [potion types](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.java).
 
 **Example** `effect type:SPEED`
 
@@ -107,3 +107,9 @@ This condition returns true randomly. There is one argument `random:` followed b
 Sneak condition is only true when the player is sneaking. This would probably be useful for creating traps, I'm not sure. There are no arguments for this one.
 
 **Example**: `sneak`
+
+## Journal entry: `journal`
+
+This condition will return true if the player has specified entry in his journal (internal name of the entry, like in _journal.yml_). The only argument is name of the entry.
+
+**Example**: `journal wood_started`

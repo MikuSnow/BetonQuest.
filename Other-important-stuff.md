@@ -6,7 +6,7 @@ Global locations are locations at which events can fire. They are defined as nor
 
 ## Journal
 
-The journal is a book in which all your adventures are described. You can obtain it by typing **/j** command. You cannot put it into chests, item frames and so on. If you ever feel the need to get rid of your journal, try to drop it - it will dissapear. The journal is updated with journal event, and the text inside is defined in _journal.yml_ config file. If you update these texts and reload the plugin, all players' journals will reflect changes. Colors of the journal can be altered in config.yml. The entries can use color codes, but the color will be lost between pages.
+The journal is a book in which all your adventures are described. You can obtain it by typing **/j** command and selecting it from backpack. You cannot put it into chests, item frames and so on. If you ever feel the need to get rid of your journal, try to drop it - it will return to your backpack. The journal is updated with journal event, and the text inside is defined in _journal.yml_ config file. If you update these texts and reload the plugin, all players' journals will reflect changes. Colors of the journal can be altered in config.yml. The entries can use color codes, but the color will be lost between pages.
 
 ## Tags
 
@@ -30,7 +30,33 @@ If you want to use items in Give and Take events or Item and Hand conditions you
 
 1. Using the command `/q item <itemID>`. It will take the item you are holding in hand and put it into items.yml under `<itemID>` name. Easy and fast.
 
-2. Manually. Add a new line to items.yml and type there item's ID followed by a colon and space. Now the first thing you need to do is insert item's type. You can find available types [here](http://jd.bukkit.org/rb/apidocs/org/bukkit/Material.html). That's all you need for an item. Now there are some arguments you can add to make it better. `data:` is the data value (eg. for different wool colors). It should be followed by an integer. Default value is 0, so in most cases you can omit it. `name` is item's display name. All spaces should be replaced by `_`. `lore:` is item's lore. Spaces follow the same rules as in name, and new lines are added by a semicolon. `enchants:` is a list of enchants separated by command. Each enchantment has two values separated by a colon: name and level. All names can be found [here](http://jd.bukkit.org/rb/apidocs/org/bukkit/enchantments/Enchantment.html). Example of two enchantments is `enchants:DAMAGE_ALL:3,KNOCKBACK:2`. If the item is a written book you can also add `title:`, `author:` and `text:`. Spaces should be replaced by `_`, as always. The text can be divided to pages with `|` character and you can add new lines with `\n`. If the item is a potion then you can add `effects:`, where all effects are separated by commas and are build like that: `EFFECT_NAME:X:Y` where list of available effect names is [here](http://jd.bukkit.org/rb/apidocs/org/bukkit/potion/PotionEffectType.html), `X` is potion's power (1 is 1, not 2) and `Y` is duration in seconds (not ticks).
+2. Manually. Add a new line to items.yml and type there item's ID followed by a colon and space. Now the first thing you need to do is insert item's type. You can find available types [here](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html). That's all you need for an item. Now there are some arguments you can add to make it better:
+    * `data:` is the data value (eg. for different wool colors). It should be followed by an integer. Default value is 0, so in most cases you can omit it.
+    * `name` is item's display name. All spaces should be replaced by `_`.
+    * `lore:` is item's lore. Spaces follow the same rules as in name, and new lines are added by a semicolon.
+    * `enchants:` is a list of enchants separated by command. Each enchantment has two values separated by a colon: name and level. All names can be found [here](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html). Example of two enchantments is `enchants:DAMAGE_ALL:3,KNOCKBACK:2`.
+    * If the item is a written book you can also add `title:`, `author:` and `text:`. Spaces should be replaced by `_`, as always. The text can be divided to pages with `|` character and you can add new lines with `\n`.
+    * If the item is a potion then you can add `effects:`, where all effects are separated by commas and are build like that: `EFFECT_NAME:X:Y` where list of available effect names is [here](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html), `X` is potion's power (1 is 1, not 2) and `Y` is duration in seconds (not ticks).
+	* If the item is a leather armor part, you can specify color of it by adding `color:` with an integer. The integer can be easily generated with [this tool](http://www.shodor.org/stella2java/rgbint.html). If you need to get the color of a dye, just save a dyed armor to config via **/q item name** and see the exact result.
+	* If the item is a player's head, you can specify it's owner by adding `owner:` followed by owner's name, for example `owner:Notch`.
+	* If the item is an enchanted book just specify normal enchantments, they will be automatically applied to it as stored enchantments.
+
+Sometimes you will want to target everything with your item, for example check if the player has any diamond sword (you don't want to let him go on a dangerous quest without proper equipment). Sometimes however you will want to target some specific simple item. Imagine a player has to bring a standard diamond sword to someone, so it can be enchanted with powerful magic. But he also carries his own, private _Diamond Sword of Beton and Destruction_. You don't want to take ANY diamond sword from him, as it could potentially remove his "private" sword. This is when "none" tag becomes useful.
+
+If you want to target only item without any enchantments, or without a name (or potion without effects etc.), you should define it as `enchants:none` or `name:none` etc. The item will behave as usual, but targeting it with conditions and events will have special behavior.
+
+### **Big note about books in 1.8 version of Minecraft**
+
+It seems that some servers are adding `§0` at the end of every line when plugins generate books. It's usually no big deal, as this color code just resets the formating back to black color, but it can break item conditions (the item saved to configuration isn't the same as the one you've got with an event). Because of that I suggest you do the following to ensure that both books (the one in your hand and the other one in configuration) are identical:
+
+1. Obtain a desired book (for example by writing it)
+2. Save it with `/q item book` (or any other name, it doesn't matter for this example)
+3. Get it by an event (`give book`)
+4. Save the book you've just got again under the same name
+5. Get the book again with the same event as before
+6. That book will be identical as the one in configuration
+
+I am very sorry for inconvenience, but removing those `§0`s automaticly could cause problems with formatting done by the user. I'm not going to risk that.
 
 **Examples**:
 
@@ -41,4 +67,15 @@ If you want to use items in Give and Take events or Item and Hand conditions you
       text:The_text_goes_here.|This_is_on_the_new_page.\nAnd_this_is_one_line_below.'
 
 _Note that YAML allows line breaking._
-    
+
+## Backpack
+
+Sometimes you'll want some items to be persistent over death. If the player has lost them the quest would be broken. You can add a apecific line to item's lore to make it persistent (`&2Quest_Item` by default, `_` is a space in item's definition). Note that this must be a whole new line in the lore! Such item wouldn't be dropped on death, instead it would be placed in player's backpack. **Example**: `important_sword: 'DIAMOND_SWORD name:Sword_for_destroying__The_Concrete lore:Made_of_pure_Mithril;&2Quest_Item'`
+
+To open your backpack just type **/j** command. The inventory window will open, displaying your stored items. The first slot is always the journal, and if you get it, the slot will stay empty. You can transfer quest items back and forth between inventories by clicking on them. Left click will transfer just one item, right click will try to transfer all items. Normal items cannot be stored into the backpack, so it's not an infinite inventory.
+
+If you will ever have more than one page of quest items, the buttons will appear. You can customize those buttons by creating `previous_button` and `next_button` items in _items.yml_ file. Their name will be overwritten with the one defined in _messages.yml_.
+
+Quest items cannot be dropped in any way other than using them. This way you can create a quest for eating cookies by giving the player a stack of cookies flagged as quest items and not continuing until there are no more cookies in his inventory/backpack. The player cannot drop the cookies, so he must eat every one of them to complete the quest.
+
+Don't worry if the item-dropping filter isn't working for your items when you're in creative mode - it's not a bug. It's a feature. Creative-mode players should be able to easily put quest items in containers like TreasureChests.

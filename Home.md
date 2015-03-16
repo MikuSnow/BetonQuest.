@@ -10,6 +10,7 @@ BetonQuest is advanced and powerful quests plugin. It doesn't follow traditional
 * Multiple choice conversations with NPCs
 * No immersion breaking interface elements
 * Journal in a book
+* Backpack for quest items
 * Item checks are considering almost everything, even text in books
 * Tags for storing player's progress and other information
 * Various reputation systems using Points
