@@ -17,6 +17,7 @@ BetonQuest is advanced and powerful quests plugin. It doesn't follow traditional
 * Global locations: firing events for a player when he enters specified area (without active objective)
 * Delay for events - daily quests or repeatable reward collection
 * Citizens2 NPC support
+* MythicMobs, Skript, WorldGuard and Vault integration
 * UUID or names
 * Multiple languages and easy translating
 * API for creating your own events, conditions and objectives
