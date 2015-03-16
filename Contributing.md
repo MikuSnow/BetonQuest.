@@ -1,6 +1,6 @@
 # Contributing
 
-**TODO list have been moved to [Issues](https://github.com/Co0sh/BetonQuest/issues). [These things](https://github.com/Co0sh/BetonQuest/issues?q=milestone%3A"1.6+version"+) will appear in 1.6 version.**
+**TODO list have been moved to [Issues](https://github.com/Co0sh/BetonQuest/issues). [These things](https://github.com/Co0sh/BetonQuest/issues?q=milestone%3A"1.7+version"+) will appear in 1.7 version.**
 
 Do you like my work here? There are some ways you can help to make this plugin even better.
 
