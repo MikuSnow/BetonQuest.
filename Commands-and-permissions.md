@@ -12,7 +12,7 @@
 * **/q event \<playerName\> \<eventID\>** - fires an event for the player
 * **/q condition \<playerName\> \<conditionID\>** - shows if the player meet specified condition or not
 * **/q item \<itemID\>** - creates an item based on what you're holding in hand
-* **/q config \<set/add/read\> \<path\> [value] - sets, adds or reads values from configuration
+* **/q config \<set/add/read\> \<path\> [value]** - sets, adds or reads values from configuration
 * **/q purge \<playerName\>** - deletes all player's data from the database
 * **/q backup** - creates a backup of configuration files and database
 
