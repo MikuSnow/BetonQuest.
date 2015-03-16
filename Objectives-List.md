@@ -8,7 +8,7 @@ This objective completes when player moves in specified range of specified locat
 
 ## Block: `block`
 
-To complete this objective player must break or place specified amount of blocks. First argument after name is type of the block and data value after a colon (WOOD:2 means birch wooden planks). You can find possible types at Bukkit reference page there: [material types](jd.bukkit.org/rb/apidocs/org/bukkit/Material.html). Next is amount. It can be more than 0 for placing and less than 0 for destroying.
+To complete this objective player must break or place specified amount of blocks. First argument after name is type of the block and data value after a colon (WOOD:2 means birch wooden planks). You can find possible types at Bukkit reference page there: [material types](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html). Next is amount. It can be more than 0 for placing and less than 0 for destroying.
 
 **Example** `block LOG:2 -16 events:reward tag:beton`
 
