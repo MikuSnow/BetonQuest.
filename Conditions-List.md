@@ -113,3 +113,9 @@ Sneak condition is only true when the player is sneaking. This would probably be
 This condition will return true if the player has specified entry in his journal (internal name of the entry, like in _journal.yml_). The only argument is name of the entry.
 
 **Example**: `journal wood_started`
+
+## Test for block: `testforblock`
+
+This condition is met if the block at specified location matches the given material. First argument is a location, for example `100;200;300;world`, and the second one is material of the block to check against, from [this list](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html).
+
+**Example**: `testforblock 100;200;300;world STONE`
