@@ -4,7 +4,7 @@
 
 This objective completes when player moves in specified range of specified location and meets all conditions. The first argument after objective's name must be location written like `100;200;300;world;5` where 100 is X coordinate, 200 is Y, 300 is Z, world is name of a world and 5 is required range. All conditions and events must be passed after location argument. Coordinates must be valid doubles (floating point must be dot) and world must be name of a loaded world.
 
-**Example** `location 100;200;300;world;5 condition:test1,!test2 events:test1,test2 tag:beton`
+**Example** `location 100;200;300;world;5 conditions:test1,!test2 events:test1,test2 tag:beton`
 
 ## Block: `block`
 
