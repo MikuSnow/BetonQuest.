@@ -43,4 +43,4 @@ _As of 1.2 BetonQuest uses Metrics system to send anonymous data to [McStats.org
 
 _As of 1.4 BetonQuest features auto-updater. In 1.4 it's disabled by default. In 1.5 it's enabled by default. You can enable/disable this by setting "autoupdate" to true/false in configuration file. It's 100% safe, as all downloaded updates will be approved by Bukkit staff. Additionally the plugin will backup all your data before each update and create changelog file just for you. You will also receive a notification about the update when you join the server._
 
-_Development builds of BetonQuest can be acquired [here](http://betoncraft.pl/downloads). These builds may contain a lot of bugs. **Use them at your own risk!**_
+_Development builds of BetonQuest can be acquired [here](http://betonquest.betoncraft.pl). These builds may contain a lot of bugs. **Use them at your own risk!**_
