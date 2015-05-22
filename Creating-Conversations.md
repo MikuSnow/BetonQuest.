@@ -1,6 +1,6 @@
 # Creating conversations
 
-Conversations are the base of your RPG system. It's the main method for starting and completing quests, as well as creating more immersive gameplay. You define every conversation in a separate file in "conversations" directory inside plugin'd root folder. This file's name should end with `.yml` extension, eg. `innkeeper.yml`.
+Conversations are the base of your RPG system. It's the main method for starting and completing quests, as well as creating more immersive gameplay. You define every conversation in a separate file in "conversations" directory inside plugin's root folder. This file's name should end with `.yml` extension, eg. `innkeeper.yml`.
 
 Let’s start with picturing how it should look like at the end. Then we can try to understand how it’s done. From player's perspective conversation looks like this: player right-clicks on NPC (let's call them Innkeeper and Steve) (Steve is the player). Innkeeper says his initial text, and Steve can choose from, let's say three options. He types in chat `1` (or `2` or `3`), and Innkeeper continues conversation saying something different. Steve again has options to choose and so on. If Steve types in chat some other things like letters of greater numbers, Innkeeper will respond that he doesn't understand him. Keeping this in mind let's write our first conversation.
 
