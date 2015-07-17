@@ -68,7 +68,7 @@ The armor condition requires player to wear given armor, as an item defined in _
 
 ## Potion Effect: `effect`
 
-To meet this condition player must be under specified potion effect. There is only one argument and it takes values from this page: [potion types](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.java).
+To meet this condition player must be under specified potion effect. There is only one argument and it takes values from this page: [potion types](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html).
 
 **Example** `effect SPEED`
 
