@@ -1,7 +1,5 @@
 # Contributing
 
-**TODO list have been moved to [Issues](https://github.com/Co0sh/BetonQuest/issues). [These things](https://github.com/Co0sh/BetonQuest/issues?q=milestone%3A"1.7+version"+) will appear in 1.7 version.**
-
 Do you like my work here? There are some ways you can help to make this plugin even better.
 
 ## New ideas
@@ -12,6 +10,10 @@ Need something? Or just have a brilliant idea? Head to the [Issues](https://gith
 
 Found a bug? Great, create new [issue](https://github.com/Co0sh/BetonQuest/issues) so I can fix it in the next version!
 
+## Translations
+
+I love to see this plugin used by people from other countries. I would be happy if you could translate it to your language and share the translation with me. Just remember one thing - all special characters must go to _advanced-messages.yml_. The original _messages.yml_ cannot contain any of them, because some servers are not able to parse special chars and throw errors while loading the configuration.
+
 ## Contributing code
 
 If you know Java and Bukkit you can take some issue and create pull request. Just let me know and remember these few things:
@@ -21,7 +23,7 @@ If you know Java and Bukkit you can take some issue and create pull request. Jus
 * Wrap your code at 100th column (most of the code should be wrapped).
 * Comment everything so the code is easy to understand for everyone.
 * Use block comments to document classes, methods and fields.
-* Case statements should be indented with 4 more spaces than a switch statement!
+* Case statements should be indented with 4 more spaces than a switch statement.
 
 ## Positive feedback
 

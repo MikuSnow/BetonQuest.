@@ -10,13 +10,13 @@ If you have this plugin you can use it's NPCs for conversations. I highly recomm
 
 NPC Kill objective requires the player to kill an NPC with the given ID. You can also define how many times an NPC has to be killed. Right after objective's name there must be na ID of the NPC. You can also add an amount by `amount:`.
 
-**Example**: `npckill 16 amount:3 events:reward tag:citizens`
+**Example**: `npckill 16 amount:3 events:reward label:citizens`
 
 ### NPCInteract Objective
 
 The player has to right-click on the NPC with specified ID. It can also optionally cancel the action, so the conversation won't start. The first argument is number (ID of the NPC), and the second is optional `cancel`.
 
-**Example**: `npcinteract 3 cancel conditions:sneak events:steal tag:stealing`
+**Example**: `npcinteract 3 cancel conditions:sneak events:steal label:stealing`
 
 ## Vault
 
@@ -36,9 +36,9 @@ Deposits or withdraws money from player's account. There is only one argument, a
 
 ### Money Condition `money`
 
-Checks if the player has specified amount of money You can specify only one argument, `amount:`. It's obvious what is it for. It cannot be negative!
+Checks if the player has specified amount of money. You can specify only one argument, amount integer. It cannot be negative!
 
-**Example**: `money amount:500 --invert`
+**Example**: `money 500`
 
 ## MythicMobs
 
@@ -48,7 +48,7 @@ Having MythicMobs allows you to use MythicMobs MobKill objective and MythicMobs 
 
 To complete this objective you need to kill specified amount of MythicMobs. The first argument must be the mob's internal name (the one defined in MythicMobs' configuration). You can optionally add `amount:` argument to specify how many of these mobs the player needs to kill.
 
-**Example**: `mmobkill amount:2 events:reward tag:mythicmobs`
+**Example**: `mmobkill SkeletalKnight amount:2 events:reward label:mythicmobs`
 
 ### MythicMobs SpawnMob Event `mspawnmob`
 
@@ -80,3 +80,17 @@ You can check BetonQuest conditions in your scripts by using the syntax `player 
 You can also fire BetonQuest events with scripts. The syntax for Skript effect is `fire [betonquest] event "id" for player`. Everything else works just like in condition above.
 
 **Example**: _in your script:_ `fire event "give_emeralds" for player` _in events.yml:_ `give_emeralds: give emerald:5`
+
+## WorldGuard
+
+### WorldGuard Region objective `region`
+
+To complete this objective you need to enter WorldGuard region with specified name. The only argument in instruction string is name of the region.
+
+**Example**: `region beton events:kill label:trap`
+
+### WorldGuard Region condition `region`
+
+This condition is met when the player is inside the specified region. The only argument is the name of the region.
+
+**Example**: `region beton`

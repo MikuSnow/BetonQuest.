@@ -11,17 +11,24 @@ First of all you should install Citizens plugin. You can find it on it’s [dev.
 There are several options in config.yml file: 
 
 * First is connection data for MySQL database. These are pretty straightforward.
-* Metrics will make your server send anonymous data about the plugin and amount of players to mcstats.org. I highly recommend leaving it 'true', as I like to see that someone is using BetonQuest.
 * AutoUpdate is set to true by default, if you don't want the plugin to update itself set it to false.
-* UUID - if set to true the plugin will use UUIDs to store information about players, if false it will use names. Dont set to true if you run pre 1.7.5 server! If you want to manually convert names to UUIDs set this to true and add a line "convert: true". Conversion will start on next plugin reload (eg. /q reload).
 * Language is just translation of the plugin. Currently there are 6 available languages, English (en), German (de), French (fr), Spanish (es), Chinese (cn) and Polish (pl).
 * Default journal slot is a slot number in which the journal will appear. Default is -1 (last possible slot).
 * Max NPC distance is the distance from NPC in which a conversation will end if player goes away.
-* Global locations is list of location objectives’ IDs which are considered as global.
 * Sounds define what sounds will be played on these occasions: `start` and `end` refer to starting/ending conversations. `journal` is just updating journal. `update` is played when there's a changelog file, to draw your attention. `full` can be played when the player uses /j command but his inventory is full. List of all possible sounds can be found [here](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html).
 * Next are colors for journal: `date` is a color of date of every entry, `line` is a color of lines separating entries and `text` is just a color of a text. You need to use standard color codes without `&` (eg. `'4'` for dark red).
-* `tellraw` option is responsible for clickable text in conversations, it can be false or true.
+* `default_conversation_IO` option is responsible for the type of a conversation output. The possible values are `simple`, `tellraw` and `chest`.
+* `combat_delay` is a delay (in seconds) the player must wait before he can start the conversation after combat.
+* `notify_pullback` will display a message every time the player is pulled back by the `stop` option in conversations.
+* `default_package` is a name of the package that should be used when you don't specify package in /q command. It's for your convenience.
+* `cmd_blacklist` is a list of commands that can't be used while in conversation. Remember that you can type here only single words!
+* `hook` controls compatibility with other plugins. Here you can turn off each hook.
+* `remove_items_after_respawn` option should be turned on if you don't use "keepInventory" gamerule. It prevents other plugins from duplicating quest items after death. When the player dies, his quest items are removed from drops and stored in the backpack, but some plugins may try to restore all items to the player (for example WorldGuard custom flag keep-inventory). That's why it's so important to remove the quest items that are in player's inventory after he respawns (they are also in backpack). The "keepInventory" gamerule however works differently - the items are never dropped, so they cannot be added to backpack. Removing them from the inventory would destroy them forever. Sadly, Bukkit does not allow for gamerule checking, so it's up to you to decide. Once again: if you have "keepInventory" gamerule set to true, this setting has to be false, and vice versa.
+* The `conversation_colors` section controls the looks of the conversations: NPC's text, player's options and his reply.
+* `date_format` is the Java date format used in journal dates. It needs to have a space between the day and hour.
 * `debug` is responsible for logging plugin's activity to _debug.log_ file in _logs_ directory. You shouldn't turn this on as it can slow your server down. However if you experience any errors turn this on, let the plugin gather the data and send logs to the developer. Note that first run of the plugin will be logged anyway, just as a precaution.
+
+There is also `advanced-messages.yml` file. It contains translations with special characters. Not all servers are capable of displaying them, some will even crash the plugin, but your server can use them, just replace the content of original `messages.yml` with this file. Note that Chinese translation is only available in `advanced-messages.yml` file.
 
 ## AutoUpdater
 

@@ -1,2 +1,4 @@
-generate.bat
-BetonQuestDevDocumentation.pdf
+*.bat
+*.pdf
+*.exe
+*.ftp
