@@ -76,7 +76,7 @@ Conversations can be assigned to NPCs. You do it in the _main.yml_ file inside a
 
 The first string is the ID of the NPC, second is the corresponding conversation name. In case you use Citizens, ID is just the ID os an NPC. To acquire it just select the NPC and type `/npc`. If you don't want to use Citizens, you can also build NPCs as any other building in Minecraft:
 
-Place somewhere a block of stained clay, no matter the color. Then place a head on top of it (type doesn't matter, it must be head). Now place a sign on the side of the clay block (it can be on it's back) and type in the first line `[NPC]`, and on the second line the ID of the NPC. You need to have permission `betonquest.createnpc` for that. Congratulations, you have created the NPC. Now you can add levers (hands) to it and maybe even fence gate (legs). Conversation is started by right clicking it's head.
+Place somewhere a block of stained clay, no matter the color. Then place a head on top of it (type doesn't matter, it must be head). Now place a sign on the side of the clay block (it can be on it's back) and type in the first line `[NPC]`, and on the second line the ID of the NPC (in case of the above code example, the ID would be `Innkeeper`). You need to have permission `betonquest.createnpc` for that. Congratulations, you have created the NPC. Now you can add levers (hands) to it and maybe even fence gate (legs). Conversation is started by right clicking it's head.
 
 ## Items
 
