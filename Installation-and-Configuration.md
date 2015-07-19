@@ -1,4 +1,4 @@
-# Instalation and Configuration
+# Installation and Configuration
 
 ## Installation
 
