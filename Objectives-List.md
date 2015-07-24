@@ -50,9 +50,9 @@ To complete this objective player must tame some amount of mobs. valid mob types
 
 ## Delay: `delay`
 
-This objective is just a long, persistent delay for firing events. It will run only after certain amount of time (measured in minutes) and only when player is online and meets all conditions. If a player is offline at that time it will just wait for them to log in. It is not 100% accurate though, as it can run up to a minute after the required amount of time. You should use it for example to delete tags so the player can complete quests multiple times. First argument is `delay:` and it accepts number of minutes. The rest is just like in other objectives.
+This objective is just a long, persistent delay for firing events. It will run only after certain amount of time (measured in minutes) and only when player is online and meets all conditions. If a player is offline at that time it will just wait for them to log in. It is not 100% accurate though, as it can run up to a minute after the required amount of time. You should use it for example to delete tags so the player can complete quests multiple times. First argument is number of minutes. The rest is just like in other objectives.
 
-**Example**: `delay delay:1440 events:!event1,event2`
+**Example**: `delay 1440 events:!event1,event2`
 
 ## Arrow Shooting: `arrow`
 
