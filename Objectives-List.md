@@ -20,9 +20,9 @@ The player must kill specified amount of mobs You must specify mob type first an
 
 ## Action: `action`
 
-This objective completes when player clicks on given block type. This can be further limited by location condition and item in hand condition. First argument is type of the click, it can be right, left or any. Next is block type, optionally with data value after colon. You can also specify `loc:` argument, followed by standard location format. It will define where the clicked block needs to be, as opposed to "where you must be" in location condition. If you add argument `cancel`, the click will be canceled (chest will not open etc.)
+This objective completes when player clicks on given block type. This can be further limited by location condition and item in hand condition. First argument is type of the click, it can be right, left or any. Next is block type, optionally with data value after colon. You can also specify `loc:` argument, followed by standard location format with additional range number, just like in location objective. It will define where the clicked block needs to be, as opposed to "where you must be" in location condition. If you add argument `cancel`, the click will be canceled (chest will not open etc.)
 
-**Example**: `action right DOOR:1 conditions:holding_key loc:100;200;300;world`
+**Example**: `action right DOOR:1 conditions:holding_key loc:100;200;300;world;5`
 
 ## Death: `die`
 
