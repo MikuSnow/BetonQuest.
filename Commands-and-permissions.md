@@ -18,7 +18,7 @@
 * **/q backup** - creates a backup of configuration files and database
 * **/q create \<package\>**: creates new package with given name, filled with default quest
 * **/q vector \<packname.variable\> \<newvariable\>**: calculates the vector from first location variable to you position and saves it as second variable
-* **/questlang \<lang\>** - changes the language for the player (and globally if used from console)
+* **/questlang \<lang\>** - changes the language for the player (and globally if used from console). `default` language will use the language defined in _config.yml_.
 
 ## Aliases
 
