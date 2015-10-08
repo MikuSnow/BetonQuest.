@@ -4,27 +4,33 @@ If you have any questions please read it first. It's very likely that it has bee
 
 ***
 
-**Q**: _When I first install this plugin it gives me strange errors saying that it could not read messages.yml because of special characters being not allowed..._
+**Q**: _Would you make conversation options clickable?_
 
-**A**: This has been fixed in 1.7 dev versions. Just remove your _messages.yml_ file before updating. For older versions: your server doesn't support UTF-8 encoding. That means that you probably can't use characters like **ś**, **ł**, **¿** and others. To enable this you should add `-Dfile.encoding=UTF8` to your starting script. It's that script which you use to start your server (typically named `run.bat` on Windows and `start.sh` on Linux). There should be one line starting with `java -jar` or something like that. Add `-Dfile.encoding=UTF8` somewhere before `-jar`, but after `java`. If you don't have access to starting script, then ask your hosting to change that for you. It they refuse you - it's time to change the hosting. No, really, they are not professional if they won't change such a simple thing.
+**A**: Open _config.yml_ file and set `default_conversation_IO` option to "tellraw". You can also set it to "chest" if you want conversations to be displayed in an inventory GUI.
+
+***
+
+**Q**: _Will you add particles over NPCs' heads like in `Quests` plugin?_
+
+**A**: [Yes, I will, eventually.](https://github.com/Co0sh/BetonQuest/issues/2)
+
+***
+
+**Q**: _The players don't know they have to end a conversation, could you add "auto-ending" when walk away?_
+
+**A**: Set `stop` option to "false" in conversation file.
+
+***
+
+**Q**: _I have an error which says "_Cannot load plugins/BetonQuest/<packName>/conversations/<conversation>.yml_", what is wrong?_
+
+**A**: You have incorrect YAML syntax in your conversation file. Check it with [YAML Lint](http://yamllint.com) to see what's wrong. Usually it's because you start a line with `!` or `&`, forget colons or make some weird things with apostrophes.
 
 ***
 
 **Q**: _Where is a command for creating quests?_
 
-**A**: There is no such command, nor there will be. As of today you need to edit the files directly, I'm sorry. The process of writing advanced quests cannot be as easy as in simple Quests plugins, so it would be even harder to do it with commands. I am planning however to code a web-based editor, which would be run similarly to [Dynmap](http://dev.bukkit.org/bukkit-plugins/dynmap/).
-
-***
-
-**Q**: _Would you add X feature?_
-
-**A**: Check again if it's not already added. I have already got plenty of such requests, 3 of them were about MySQL support (which by the way was implemented right after starting the development, before 1.0 release). If there is no such feature, and it doesn't involve PvP in any way then I can add it.
-
-***
-
-**Q**: _Why not PvP?_
-
-**A**: I don't like it. And yes, because of that I'm terrible at it. Go and write an addon yourself.
+**A**: There is no such command, nor there will be. As of today you need to edit the files directly, I'm sorry. The process of writing advanced quests cannot be as easy as in simple Quests plugins, so it would be even harder to do it with commands. I am planning however to code a desktop editor.
 
 ***
 
