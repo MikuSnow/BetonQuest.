@@ -22,7 +22,7 @@ If you have any questions please read it first. It's very likely that it has bee
 
 ***
 
-**Q**: _I have an error which says "_Cannot load plugins/BetonQuest/<packName>/conversations/<conversation>.yml_", what is wrong?_
+**Q**: _I have an error which says "Cannot load plugins/BetonQuest/<packName>/conversations/<conversation>.yml", what is wrong?_
 
 **A**: You have incorrect YAML syntax in your conversation file. Check it with [YAML Lint](http://yamllint.com) to see what's wrong. Usually it's because you start a line with `!` or `&`, forget colons or make some weird things with apostrophes.
 
