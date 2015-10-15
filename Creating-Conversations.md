@@ -28,7 +28,7 @@ Each conversation must define name of the NPC (some conversations can be not bou
       bye:
         text: I must go.
 
-Note 1: _Configuration files use yaml. Google it if you don't know anything about it. Main rule is that you must use two spaces instead of tabs when going deeper into the hierarchy tree. If you want to write `'` character, you must double it and surround the whole text with another `'` characters (for example `unknown` option above). When writing `true` or `false` it also needs to be surrounded with `'`. If you want to start the line with `&` character, the whole line needs to be surrounded with `'`._
+Note 1: _Configuration files use yaml. Google it if you don't know anything about it. Main rule is that you must use two spaces instead of tabs when going deeper into the hierarchy tree. If you want to write `'` character, you must double it and surround the whole text with another `'` characters. When writing `true` or `false` it also needs to be surrounded with `'`. If you want to start the line with `&` character, the whole line needs to be surrounded with `'`._
 
 Note 2: _That conversation was just an example. It isn't valid, because it's missing a lot of other options._
 
@@ -46,13 +46,13 @@ This can and will be a little confusing, so you should name your options, condit
 
 ## Translations
 
-As you can see in default conversation, there are additional messages in other languages. That's because you can translate your conversations into multiple languages. The players will be albe to choose their preferred one with **/questlang** command. You can translate every NPC/player option, quester's name and "unknown" message. You do this like this:
+As you can see in default conversation, there are additional messages in other languages. That's because you can translate your conversations into multiple languages. The players will be albe to choose their preferred one with **/questlang** command. You can translate every NPC/player option and quester's name. You do this like this:
 
     quester:
       en: Innkeeper
       pl: Karczmarz
       de: Gastwirt
 
-As said before, the same rule applies to all options and the "unknown" message. The player can choose only from languages present in _messages.yml_, and if there will be no translation to this language in the conversation, the plugin will fall back to the default language, as defined in _config.yml_. If that one is not defined, there will be an error.
+As said before, the same rule applies to all options and quester's name. The player can choose only from languages present in _messages.yml_, and if there will be no translation to this language in the conversation, the plugin will fall back to the default language, as defined in _config.yml_. If that one is not defined, there will be an error.
 
 You can also translate journal entries, quest cancelers and `message` events, more about that later.
