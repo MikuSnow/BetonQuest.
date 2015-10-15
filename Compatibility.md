@@ -10,13 +10,13 @@ If you have this plugin you can use it's NPCs for conversations. I highly recomm
 
 NPC Kill objective requires the player to kill an NPC with the given ID. You can also define how many times an NPC has to be killed. Right after objective's name there must be na ID of the NPC. You can also add an amount by `amount:`.
 
-**Example**: `npckill 16 amount:3 events:reward label:citizens`
+**Example**: `npckill 16 amount:3 events:reward`
 
 ### NPCInteract Objective
 
 The player has to right-click on the NPC with specified ID. It can also optionally cancel the action, so the conversation won't start. The first argument is number (ID of the NPC), and the second is optional `cancel`.
 
-**Example**: `npcinteract 3 cancel conditions:sneak events:steal label:stealing`
+**Example**: `npcinteract 3 cancel conditions:sneak events:steal`
 
 ## Vault
 
@@ -48,7 +48,7 @@ Having MythicMobs allows you to use MythicMobs MobKill objective and MythicMobs 
 
 To complete this objective you need to kill specified amount of MythicMobs. The first argument must be the mob's internal name (the one defined in MythicMobs' configuration). You can optionally add `amount:` argument to specify how many of these mobs the player needs to kill.
 
-**Example**: `mmobkill SkeletalKnight amount:2 events:reward label:mythicmobs`
+**Example**: `mmobkill SkeletalKnight amount:2 events:reward`
 
 ### MythicMobs SpawnMob Event `mspawnmob`
 
@@ -87,7 +87,7 @@ You can also fire BetonQuest events with scripts. The syntax for Skript effect i
 
 To complete this objective you need to enter WorldGuard region with specified name. The only argument in instruction string is name of the region.
 
-**Example**: `region beton events:kill label:trap`
+**Example**: `region beton events:kill`
 
 ### WorldGuard Region condition `region`
 
