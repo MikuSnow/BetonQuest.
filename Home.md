@@ -1,43 +1,39 @@
 ![BetonQuest](http://betonquest.betoncraft.pl/logo.png)
 
-**Documentation for 1.7 version**
+**Documentation for 1.8 version**
 
-BetonQuest is advanced and powerful quests plugin. It doesn't follow traditional convention, where a "quest" is a closed structure object. Instead, BetonQuest introduces a network of objectives which can under certain conditions trigger events. Your quests don't have to look like "kill, bring, get reward": you can create multi-threaded quests, narrated with NPC conversations, with multiple endings affecting player's gameplay in many ways.
+BetonQuest is advanced and powerful quests plugin. It offers RPG-style conversations with NPCs and a very flexible quest system. Instead of being limited to creating "quest" objects with taking requirements and rewards upon completion, BetonQuest allows you to freely define what should happen (events), if it should happen (conditions) and what needs to be done for it to happen (objectives). Your quests don't have to look like "kill, bring, get reward": you can create multi-threaded stories, narrated with NPC conversations, with multiple endings affecting the player's gameplay in many ways.
 
 ## Features
 
-* Adventures you create are not limited to boundaries of a "quest" object
-* Powerful event system: anything you want can happen anywhere in a quest
-* Powerful conditions system: you can limit whenever something should (or not) happen
-* Party system allowing for creation of group quests
-* Multiple choice conversations with NPCs
-* Journal in a book
-* Backpack for quest items
+* **Much more than just a questing plugin**
+* **Powerful event system**: anything you want can happen anywhere in a quest
+* Even more **powerful condition system**: you can limit whenever something should (or shouldn't) happen
+* **Multiple choice conversations** with NPCs optionally using an inventory GUI
+* **Party system** allowing for creation of group quests
+* **Journal** in a book
+* **Backpack** for quest items
 * Advanced item handling which considers even text in books
-* Tags for storing player's progress and other information
-* Various reputation systems using Points
-* Global locations: firing events for a players when they enter specified area
-* Delay for events - daily quests or repeatable reward collection
+* Ability to create various **reputation systems** (points)
+* Firing events for a players when they enter specified area (global locations)
+* **Daily quests** or repeatable reward collection (`delay` objective)
+* Variables in conversations - let the NPC tell how much more wood he needs!
 * Quests can be organized into distributable packages
-* Citizens2 NPC support
-* MythicMobs, Skript, WorldGuard and Vault integration
+* **Citizens2** NPC support
+* Integrated with MythicMobs, mcMMO, Heroes, SkillAPI, Quests, Skript, Denizen, Magic, WorldGuard, Vault, EffectLib and PlayerPoints
 * Multiple languages and easy translating
-* Players can choose their own language
 * API for creating your own events, conditions and objectives
-* SQLite and MySQL support
-* Configuration and database backups
-* Automatic updater 
+* SQLite and **MySQL** support
+* Last but not least, an **active, open source** project with development builds available
 
 ## Overview
 
-So how does this work exactly? I'll describe it with a simple example of the quest for getting wood. Note the difference between "events", "conditions" and "objectives".
+Imagine you have a conversation with an NPC. You can choose from multiple options, and the NPC will react differently, for example he will tell you to cut some trees when asked for a job. If you tell him that you accept his offer, an event will be fired. It will start an objective for getting wood. It will also "tag" you as someone who started the quest. From now on the NPC will check for that tag, and use different options in the conversation, for example telling you to hurry up.
 
-Firstly, you create a conversation with the NPC. The player can choose from multiple options in this conversation, and the NPC will react differently (for example he will tell the player to cut some trees when asked for a job). In some place there will be an event fired, which will add an objective for getting wood, and it will tag the player as someone who started the quest. From now on the NPC will use different options in the conversation, for example telling the player to hurry up. These options will be chosen based on conditions.
+When you complete the objective (by breaking wood blocks), the objective will fire another event. This one will "tag" you as someone who collected the wood. When you go back to the NPC and tell him about it, he will check (using a condition) if you actually have the wood in your inventory. If so, he will fire another event, giving you the reward.
 
-When the player completes the objective (for example by breaking the wood), the event will fire tagging him as someone who collected the wood. When he goes back to the NPC and tell him about getting the wood, NPC will check using conditions if the player actually has the wood. If so, he will fire the event giving a reward.
+There was no single "quest" object. This was only a conversation, which was firing events and checking conditions. The objective also wasn't a "quest" - it only added a tag when you collected the wood, nothing more. It could not exist on it's own. The same conversation on the other hand could start some other quests afterwards (for example mining some ore), so it's also not a "quest".
 
-We did not create any "quest" object. This was only a conversation, which fired events and checked conditions. The objective also wasn't a "quest" - it only tagged the player when he collected the wood, it could not exist on it's own. The conversation on the other hand could start some other quest afterwards (for example mining some ore), so it's also not a "quest".
+Don't be disappointed by my examples of getting wood and mining ore. These were only simplifications, so it's easier to explain the system. BetonQuest is capable of much more. You can add entries to player's journal based on the quests he's doing like in Morrowind, the conversations can be as multi-threaded as in Baldur's Gate and quests can be started by entering specific location like in Skyrim. You can create reputation systems, unique quest items, books that react to reading them and so on. Your quests can have multiple ways to different endings depending on players' decisions and they can require multiple players to do something.
 
-Don't be disappointed by my examples of getting wood or mining ore. These were only simplifications, so it's easier to explain the system. BetonQuest is capable of much more. The conversations can be as multi-threaded as in Baldur's Gate or Skyrim, the quests can have multiple ways to the ending, and there can be multiple different endings, which can affect reputation of the player etc. It's up to you.
-
-The plugin also features an in-book journal. Have you ever played Morrowind? It's almost the same, we just reversed the order in which you see entries, so you don't have to click through hundreds of pages. Now quests don't need to display messages like "You collected every ore, now return to Miner". Instead they can update player's journal with new entry "I collected every single ore. I should return to Miner and get my reward!" That's way more immersive.
+You don't have to use BetonQuest for quests only. Conversations with NPCs can help your players, teleports them around the map, describe server features, buy or sell stuff, give ranks etc. The only limit is your imagination!

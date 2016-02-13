@@ -26,7 +26,13 @@ Every time your objective accepts the player's action (for example killing the r
 
 `start()` and `stop()` methods must start objective's listeners and stop them accordingly. It's because the plugin turns the objective off if there are no players having it active. Normally you will register/unregister listeners here, but some objectives may be different. For example `delay` objective starts a repeating runnable and cancels it.
 
+If your objective has some properties (used in variables) you should override the `String getProperty(String name, String playerID)` method. At runtime it will be called by "objective" variables, supplying a single word. Using that word you should parse the data of the objective and return it as a String. If the supplied property name is incorrect or there was an error during getting the value, return an empty String and optionally log an error (`Debug.error(String message)`).
+
 Objectives are registered the same way as conditions and events, using `registerObjective(String name, Class<? extends Objective>)` method.
+
+## Writing variables
+
+All variables need to extend `pl.betoncraft.betonquest.api.Variable` class. In the constructor you must parse the instruction (raw variable, i.e. `%point.beton.amount%`) and extract all information about your variable's behavior. Then you have to override the `String getValue(String playerID)` method. It should return the value of the variable for the supplied player. If it's impossible, it should return an empty String. Registering variables is done via `BetonQuest.registerVariable(String name, Class<? extends Variable> variable)` method.
 
 ## Firing events
 
@@ -46,6 +52,6 @@ In order to register an object as the conversation input/output it needs to impl
 
 Registering the conversation inputs/outputs is done in the same way as objectives, events and conditions, through `BetonQuest.registerConversationIO(String name, Class<? extends ConversationIO>)` method.
 
-## Debug
+## Debugging
 
 You can debug your code using Debug class.

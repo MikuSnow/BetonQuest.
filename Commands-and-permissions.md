@@ -13,8 +13,11 @@
 * **/q event \<playerName\> \<package.eventID\>** - fires an event for the player
 * **/q condition \<playerName\> \<package.conditionID\>** - shows if the player meet specified condition or not
 * **/q item \<package.itemID\>** - creates an item based on what you're holding in hand
+* **/q give \<package.itemID\>** - gives you an item defined in the configuration
 * **/q config \<set/add/read\> \<path\> [value]** - sets, adds or reads values from configuration
 * **/q purge \<playerName\>** - deletes all player's data from the database
+* **/q rename \<tag/point/objective/entry\> <oldName> <newName>** - renames all specified things in the database
+* **/q delete \<tag/point/objective/entry\> <name>** - deletes all specified things in the database
 * **/q backup** - creates a backup of configuration files and database
 * **/q create \<package\>**: creates new package with given name, filled with default quest
 * **/q vector \<packname.variable\> \<newvariable\>**: calculates the vector from first location variable to you position and saves it as second variable
@@ -32,16 +35,22 @@
     * **condition**: c, conditions
     * **journal**: j, journals
     * **item**: i, items
+    * **give**: g
+    * **rename**: r
+    * **delete**: d, del
     * **create**: package
 * **/questlang**: ql
 
 ## Permissions
+
 
 * **betonquest.admin** - allows using admin commands (/q ...) and creating an NPC from blocks
 * **betonquest.journal** - allows using /j command (default for players)
 * **betonquest.backpack** - allows using /backpack command (default for players)
 * **betonquest.conversation** - allows talking with NPCs (default for players)
 * **betonquest.language** - allows changing the language (default for players)
+
+Don't give **betonquest.admin** permission to people you don't fully trust. They can use **/q config** command to add a `command` event, and this way execute any command as the console. This might be dangerous.
 
 ## Main command details
 
@@ -59,11 +68,17 @@ Running events for online players can be done with event argument: '`/q event Be
 
 If you need to create for example "Nettlebane" quest item, just hold it in your hand and type '`/q item default.nettlebane`'. It will copy the item you're holding into the _items.yml_ file and save it there with the name you specified (in this case "nettlebane"). You can skip the package name here as well.
 
+The '`/q give package.item`' command will simply give you specified item.
+
 Config subcommand is used to modify or display values in configuration files. `set` option replaces the value with what you typed, `add` simply adds your string to the existing value. (Note on spaces: by default the plugin won't insert a space between existing and added value. You can however achieve that by prefixing the string with `_` character. For example: existing string is `objective location`, and you want to add `100;200;300;world;10`. Your command will look like `/q config add default.events.loc_obj _100;200;300;world;10`). `read` option allows you to display config value without modifying it.
 
 Path in this command is like an address of the value. Next branches are separated by dots. For example language setting in main configuration has path `config.language`, and a text in "bye" player option in default quest has path `default.conversations.innkeeper.player_options.bye.text`
 
-You can purge specific player with '`/q purge Beton`' command. Currently there is no way of purging the entire database from command, but you can do that easily by changing the prefix used by the database.
+You can purge specific player with '`/q purge Beton`' command, where Beton is the name of the player. To purge the entire database at once simply change the prefix in _config.yml_ or delete _database.db_ file.
+
+Delete command ('`/q delete`') allows you to delete from the database every tag, point, objective or journal entry with specified name.
+
+Rename command ('`/q rename`') allows you to rename every tag, point, objective or journal entry in the database. In case of an objective it will also rename the objective in _objectives.yml_, so it continues to work correctly.
 
 If you want to backup your configuration and database make sure that your server is empty (this process requires all data to be saved to database -> all players offline) and run '`/q backup`' command. You will get a zip file containing all your data, ready to be unzipped for restoring the plugin.
 

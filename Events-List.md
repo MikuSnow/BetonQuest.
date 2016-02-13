@@ -2,51 +2,47 @@
 
 ## Message: `message` _static_
 
-This event simply displays a message to player. You just pass the message right after event name. `%player%` will be replaced with player's name, and all & color codes are respected. You can add additional translations by starting them with `{lang}` argument, just like in the example. The player will see his language or the default one if it's not defined.
+This event simply displays a message to the player. The instruction string is the message. All `&` color codes are respected. You can add additional translations by starting them with `{lang}` argument, just like in the example. The player will see his language or the default one if it's not defined. You can use conversation variables with this event. Just make sure not to use `%npc%`.
 
-**Example**: `message {en} &4You are banned! {pl} &4Jestes zbanowany! {de}&4Ich weiß nicht.`
+**Example**: `message {en} &4You are banned, %player%! {pl} &4Jestes zbanowany, %player%! {de}&4Ich weiß nicht.`
 
 ## Command: `command` _persistent_, _static_
 
-Runs specified command from console. You just pass the command without leading slash. All `%player%` are replaced with player's name. You can define additional commands by separating them wit `|` character.
+Runs specified command from the console. The instruction string is the command, without leading slash. You can only use `%player%` variable here, with no arguments. You can define additional commands by separating them with `|` character.
 
 **Example**: `command kill %player%|ban %player%`
 
 ## Teleport: `teleport`
 
-Teleports player to specified location, with or without head rotation. It will also end the conversation, if the player has one active. The first and only argument must be location, created with following syntax: `100;200;300;world` or `100;200;300;world;90;45` where the first 3 numbers are coordinates (double), `world` is name of the world and last to numbers are yaw and pitch respectively (float).
+Teleports the player to a specified location, with or without head rotation. It will also end the conversation, if the player has one active. The first and only argument must be location, created with following syntax: `100;200;300;world` or `100;200;300;world;90;45` where the first 3 numbers are coordinates (double), `world` is name of the world and last two numbers are yaw and pitch respectively (float).
 
 **Example**: `teleport 123;32;-789;world_the_nether;180;45`
 
 ## Point: `point` _persistent_
 
-Gives the player specified amount of points in given category. Amount can be negative to subtract points. First argument after event name must be category, and second amount of points to give.
+Gives the player a specified amount of points in a specified category. Amount can be negative if you want to subtract points. You can also use an asterisk to do multiplication (or division, if you use a fraction). First argument after the event name must be a category, and the second one - amount of points to give/take/multiply.
 
 **Example**: `point npc_attitude 10`
+**Example**: `point village_reputation *0.75`
 
 ## Tag: `tag` _persistent_
 
-This event adds (or removes) a tag to player. This, along with `!` negation, is one of the most powerful tools for creating dynamic conversations. The first argument after event's name must be `add` or `del`. It works as it sounds. Next goes tag string. It can't contain spaces (though _ is fine). Additional tags can be added, separated by commas (without spaces).
+This event adds (or removes) a tag to the player. The first argument after event's name must be `add` or `del`. Next goes the tag name. It can't contain spaces (though `_` is fine). Additional tags can be added, separated by commas (without spaces).
 
 **Example**: `tag add quest_started,new_entry`
 
 ## Objective: `objective` _persistent_
 
-Manages the objectives. Syntax is `objective <action> name`, where <action> can be "start", "delete" or "complete". Name is the name of the objective, as defined in _objectives.yml_.
+Manages the objectives. Syntax is `objective <action> name`, where `<action>` can be "start", "delete" or "complete". Name is the name of the objective, as defined in _objectives.yml_.
 
 **Example**: `objective start wood`
 
-## Delete Objective: `delete` _persistent_
-
-Deletes objective with given tag. If player has more objectives of the same tag all of them will be deleted. Just like the objective event.
-
-**Example**: `delete woodcutting`
-
 ## Journal: `journal`
 
-Adds an entry to player’s journal. Entries are defined in `journal.yml` The only argument is name of the entry.
+Adds or deletes an entry to/from player’s journal. Entries are defined in `journal.yml` The first argument is action (add/del), the second one is name of the entry. You can also use only one argument, `update`, it will simply update the journal without addin any entries. It's useful when you need to update the main page.
 
-**Example**: `journal quest_started`
+**Example**: `journal add quest_started`
+**Example**: `journal update`
 
 ## Lightning: `lightning` _static_
 
@@ -128,7 +124,7 @@ Damages the player by specified amount of damage. The only argument is a number 
 
 ## Party event: `party`
 
-Runs the specified list of events (third argument) for every player in a party. More info about parties in "Party" chapter in **Other important stuff** section.
+Runs the specified list of events (third argument) for every player in a party. More info about parties in "Party" chapter in **Reference** section.
 
 **Example**: `party 10 has_tag1,!has_tag2 give_reward`
 
@@ -137,3 +133,67 @@ Runs the specified list of events (third argument) for every player in a party. 
 This event removes all specified mobs from the specified area. The first required argument is a list of mobs (taken from [here](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EntityType.html)) separated by commas. Next is location defined as `100;200;300;world;10` where last number is range aroung the location. You can also optionally specify `name:` argument, followed by name which removed mobs must have.
 
 **Example**: `clear ZOMBIE,CREEPER 100;200;300;world;10 name:Monster`
+
+## Run events: `run`
+
+This event allow for specifying multiple instruction strings in one, longer string. Each instruction must be started with `^` character and no other dividers should be used. It's not the same as `folder` condition, because you can specify an instruction string, not an event name. It is also fired on the same tick, not on the next one like in `folder`.
+
+**Example**: `run ^tag add beton ^give emerald:5 ^entry add beton ^kill`
+
+## Give journal: `givejournal`
+
+This event simply gives the player his journal. It acts the same way as **/j** command would.
+
+**Example**: `givejournal`
+
+## Sudo: `sudo`
+
+This event is similar to `command` event, the only difference is that it will fire a command as the player.
+
+**Example**: `sudo spawn`
+
+## Chest Give: `chestgive` _persistent_, _static_
+
+This works the same as `give` event, but it puts the items in a chest at specified location. The first argument is a location defined as `100;200;300;world` (only integers!), the second argument is a list of items, like in `give` event. If the chest is full, the items will be dropped on the ground. The chest can be any other block with inventory, i.e. a hopper or a dispenser. BetonQuest will log an error to the console when this event is fired but there is no chest at specified location.
+
+**Example**: `chestgive 100;200;300;world emerald:5,sword`
+
+## Chest Take: `chesttake` _persistent_, _static_
+
+This event works the same as `take` event, but it takes items from a chest at specified location. The instruction string is defined in the same way as in `chestgive` event.
+
+**Example**: `chesttake 100;200;300;world emerald:5,sword`
+
+## Chest Clear: `chestclear` _persistent_, _static_
+
+This event removes all items from a chest at specified location. The only argument is a location defined as `100;200;300;world` (only integers!).
+
+**Example**: `chestclear 100;200;300;world`
+
+## Compass: `compass`
+
+When you run this event, the player will be able to select a specified location as a target of his compass. To select the target the player must open his backpack and click on the compass icon. The first argument is either `add` or `del`, and second one is the name of the target, as defined in _main.yml_.
+
+The destination must be defined in the _main.yml_ file in `compass` section. You can specify a name for the target in each language or just give a general name, and optionally add a custom item (from _items.yml_) to be displayed in the backpack. Example of a compass target:
+
+    compass:
+      beton:
+        name:
+          en: Target
+          pl: Cel
+        location: 100;200;300;world
+        item: scroll
+
+**Example**: `compass add beton`
+
+## Cancel quest: `cancel`
+
+This event works in the same way as a quest canceler in the backpack. Running it is equal to the player clicking on the bone. The only argument is a name of a quest canceler, as defined in _main.yml_
+
+**Example**: `cancel wood`
+
+## Scoreboard: `score`
+
+This event works in the same way as `point` event, the only difference is that is uses scoreboards instead of points. You can add, subtract, multiply and divide scores in objectives on the scoreboard. The first argument is the name of the objective, second one is a number. It can be positive for additon, negative for subtraction or prefixed with an asterisk for multiplication. Multiplying by fractions is the same as dividing.
+
+**Example**: `score kills 1`

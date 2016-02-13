@@ -42,6 +42,6 @@ If you have any questions please read it first. It's very likely that it has bee
 
 **Q**: _I saved a book with a command, but `item` condition is not working on it!_
 
-**A**: This is caused by a bug (or an undocumented feature, call it like you want) in 1.8 servers. The detailed instruction on how to work it around is in "Other important stuff" chapter, in the part about items.
+**A**: This is caused by a bug (or an undocumented feature, call it like you want) in 1.8 servers. The detailed instruction on how to work it around is in "Reference" chapter, in the part about items.
 
 ***
