@@ -5,7 +5,7 @@ Content
 * [Installation and Configuration](https://github.com/Co0sh/BetonQuest/wiki/Installation-and-Configuration)
 * [Commands and Permissions](https://github.com/Co0sh/BetonQuest/wiki/Commands-and-permissions)
 * [Quick start tutorial](https://github.com/Co0sh/BetonQuest/wiki/Quick-start-tutorial)
-* [Reference](https://github.com/Co0sh/BetonQuest/wiki/Reference
+* [Reference](https://github.com/Co0sh/BetonQuest/wiki/Reference)
 * [Condition List](https://github.com/Co0sh/BetonQuest/wiki/Conditions-List)
 * [Events List](https://github.com/Co0sh/BetonQuest/wiki/Events-List)
 * [Objectives List](https://github.com/Co0sh/BetonQuest/wiki/Objectives-List)
