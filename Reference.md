@@ -138,7 +138,7 @@ should be defined in _config.yml_ as:
     - quests-village1-quest2
     - quests-village2-quest1
 
-## Global Variables
+## Global variables
 
 You can insert a global variable in any instruction string. It looks like this: `$beton$` (and this one would be called "beton"). When the plugin loads that instruction string it will replace those variables with values assigned to them in _main.yml_ file. This will be useful for example when downloading a package from the internet containing a WorldEdit schematic of the quest building. Instead of going through the whole code to set those locations, names or texts you will only have to specify a few variables (that is, of course, only if the author of the package used those variables properly in the code).
 
