@@ -11,7 +11,7 @@ Content
   * [Events](https://github.com/Co0sh/BetonQuest/wiki/Reference#events)
   * [Objectives](https://github.com/Co0sh/BetonQuest/wiki/Reference#objectives)
   * [Packages](https://github.com/Co0sh/BetonQuest/wiki/Reference#packages)
-  * [Global Variables](https://github.com/Co0sh/BetonQuest/wiki/Reference#global-variables)
+  * [Global variables](https://github.com/Co0sh/BetonQuest/wiki/Reference#global-variables)
   * [Canceling quests](https://github.com/Co0sh/BetonQuest/wiki/Reference#canceling-quests)
   * [Global locations](https://github.com/Co0sh/BetonQuest/wiki/Reference#global-locations)
   * [Static events](https://github.com/Co0sh/BetonQuest/wiki/Reference#static-events)
