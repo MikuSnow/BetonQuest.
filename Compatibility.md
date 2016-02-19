@@ -111,7 +111,7 @@ If you don't want to use particle effects on your NPCs just add `disabled: 'true
 
 ### EffectLib event: `particle`
 
-This event will load an effect defined in `effects` section in _main.yml_ file. The only argument is the name of the effect.
+This event will load an effect defined in `effects` section in _main.yml_ file. The only argument is the name of the effect. You can optionally add `loc:` argument followed by a location written like `100;200;300;world;180;-90`.
 
 **Example in _main.yml_**:
 
