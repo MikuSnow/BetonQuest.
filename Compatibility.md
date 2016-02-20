@@ -62,6 +62,20 @@ Spawn specified amount of MythicMobs at given location. The first argument is a 
 
 **Example**: `mspawnmob 100;200;300;world SkeletalKnight:1 5`
 
+## [McMMO](http://dev.bukkit.org/bukkit-plugins/mcmmo/)
+
+### McMMO level condition: `mcmmolevel`
+
+This conditions checks if the player has high enough level in the specified skill. The first argument is the name of the skill, second one is the minimum level the player needs to have to pass this condition.
+
+**Example**: `mcmmolevel woodcutting 50`
+
+### McMMO experience event: `mcmmoexp`
+
+This event adds experience points in a specified skill. The first argument is the name of the skill, second one is the amount of experience to add.
+
+**Example**: `mcmmoexp swords 1500`
+
 ## [Skript](http://dev.bukkit.org/bukkit-plugins/skript/)
 
 BetonQuest can also hook into Skript. Firstly, to avoid any confusion, I will refere to everything here by name of the plugin (Skript event is something else than BetonQuest event). Having Skript on your server will enable using BetonQuest events and conditions in scripts, and also trigger them by BetonQuest event.
