@@ -1,1 +1,3 @@
-![Statistics](http://i.mcstats.org/BetonQuest/Global+Statistics.borderless.png)
+***
+
+## _Documentation for 1.8.2 version_
