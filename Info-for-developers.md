@@ -18,11 +18,13 @@ And if you're using Maven simply add this to your _pom.xml_:
         </repository>
     </repositories>
 
-    <dependency>
-        <groupId>com.github.Co0sh</groupId>
-        <artifactId>BetonQuest</artifactId>
-        <version>v1.8.2</version>
-    </dependency>
+    <dependencies>
+        <dependency>
+            <groupId>com.github.Co0sh</groupId>
+            <artifactId>BetonQuest</artifactId>
+            <version>v1.8.2</version>
+        </dependency>
+    </dependencies>
 
 ## Writing events
 
