@@ -2,7 +2,27 @@
 
 ## Accessing the plugin
 
-Just add BetonQuest.jar to your build path and you're good to go.
+You can either add BetonQuest.jar directly to your build path or use Maven. First option if you're using Eclipse:
+
+1. Create a folder called lib in your project folder.
+2. Copy to this folder all the jar files you need.
+3. Refresh your project in eclipse.
+4. Select all the jar files, then right click on one of them and select Build Path -> Add to Build Path.
+
+And if you're using Maven simply add this to your _pom.xml_:
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
+    <dependency>
+        <groupId>com.github.Co0sh</groupId>
+        <artifactId>BetonQuest</artifactId>
+        <version>v1.8.2</version>
+    </dependency>
 
 ## Writing events
 
@@ -44,7 +64,7 @@ BetonQuest has static boolean method `condition(String playerID, String conditio
 
 ## Starting objectives
 
-Normally if you want to start the objective you should use `newObjective(String playerID, String objectiveID). It will just add this objective to the player as the `objective` event would do. You can however use `resumeObjective(String playerID, String objectiveID, String instruction)`, which will use the supplied data instruction to start the objective. It will not save it to the database, because it is assumed that the objective has just been loaded from it and it exists there without any change.
+Normally if you want to start the objective you should use `newObjective(String playerID, String objectiveID)`. It will just add this objective to the player as the `objective` event would do. You can however use `resumeObjective(String playerID, String objectiveID, String instruction)`, which will use the supplied data instruction to start the objective. It will not save it to the database, because it is assumed that the objective has just been loaded from it and it exists there without any change.
 
 ## Creating additional conversation input/output methods
 
