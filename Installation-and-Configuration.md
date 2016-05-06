@@ -11,7 +11,7 @@ First of all you should install Citizens plugin. You can find it on it’s [dev.
 There are several options in config.yml file. I will describe only those that you might want to set before using the plugin. The rest is described in appropriate sections of this documentation (i.e. `package` option is explained in _Other important stuff_ chapter, in _Packages_ topic). 
 
 * First is connection data for MySQL database. Fill it to use MySQL, leave it blank to use SQLite.
-* AutoUpdate is set to true by default, if you don't want the plugin to update itself set it to false.
+* `update` section controls the updater. `enable` option is set to true by default and it controls if the plugin should do anything update-related. `download_bugfixes` controls if BetonQuest should automatically update bugfix versions (like _1.7.3 -> 1.7.4_ or _1.8.1 -> 1.8.3_). These versions **do not** change how the plugin works, they only fix bugs, so it's good to set it to `true`. `notify_new_release` option is responsible for displaying a notification at startup about new releases (like _1.7.6 -> 1.8_). These can change how the plugin works by introducing new features and changing existing ones, so they won't be downloaded automatically. You can use `/q update` when you're ready. If you're using a development version, there will be a third setting here, `notify_dev_build`. This is the same as `notify_new_release` but it checks the development builds instead. There are no specific version checking here, so if the found dev number is higher, it will appear. You download development builds on your own responsibility.
 * Language is just translation of the plugin. Currently there are 7 available languages, English (en), German (de), French (fr), Spanish (es), Chinese (cn), Dutch (nl) and Polish (pl).
 * Sounds define what sounds will be played on these occasions: `start` and `end` refer to starting/ending conversations. `journal` is just updating journal. `update` is played when there's a changelog file, to draw your attention. `full` can be played when the player uses /j command but his inventory is full. List of all possible sounds can be found [here](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html).
 * `combat_delay` is a delay (in seconds) the player must wait before he can start the conversation after combat.
@@ -25,17 +25,13 @@ There are several options in config.yml file. I will describe only those that yo
 
 There is also `advanced-messages.yml` file. It contains translations with special characters. Not all servers are capable of displaying them, some will even crash the plugin, but your server can use them, just replace the content of original `messages.yml` with this file. Note that Chinese translation is only available in `advanced-messages.yml` file.
 
-## AutoUpdater
+## Updating
 
-**To disable this feature set `autoupdate` to false in config.yml**
-
-The auto updating process is safe and easy. When the next version of the plugin will be uploaded to dev.bukkit.org BetonQuest will download it and replace itself with newer version. On next reload/restart of your server it will be automaticly loaded.
-
-Configuration files and database will be automatically backed up to a zip file so you never lose all your work due to an error. Then configuration will be converted to a new version. At the end the localization will be updated with new languages and the cangelog.txt file will be created for you.
+The  updating process is safe and easy. After updating to a new version (manually or automatically) configuration files and database will be automatically backed up to a zip file so you never lose all your work due to an error. Then configuration will be converted to a new version. At the end the localization will be updated with new languages and the _changelog.txt_ file will be created for you.
 
 When you enter the server BetonQuest will alert you about changes and ask you to read changelog.txt file located in plugin's main directory. This way you will be always up to date with every changes made by new versions.
 
-All next versions of BetonQuest will have full compatibility with your current version of the plugin and server. This means that after updating the plugin will work _exactly_ the same way as it did before. The changes will be visible only in configuration format or new features (e.g. in 1.6 inverting conditions will be done with prefixing their name with `!` character instead of adding `--inverted` tag; updater will automatically convert all `--inverted` tags to `!`s in your configuration files and the plugin will work as expected; your only concern is not to use `--inverted` tag in conditions anymore, but you will be informed about it by changelog.txt file).
+All next versions of BetonQuest should have full compatibility with your current version of the plugin and server. This means that after updating the plugin should work _exactly_ the same way as it did before (except for bugs). The changes will be visible only in configuration format or new features (for example in 1.6 inverting conditions will be done with prefixing their name with `!` character instead of adding `--inverted` tag; updater will automatically convert all `--inverted` tags to `!`s in your configuration files and the plugin will work as expected; your only concern is not to use `--inverted` tag in conditions anymore, but you will be informed about it by changelog.txt file).
 
 If there were any unexpected errors during an update process just download previous version, restore your configs from backup and disable autoupdating feature. Don't forget to post your error so I can fix it!
 
