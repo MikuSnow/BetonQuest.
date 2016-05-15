@@ -18,12 +18,11 @@ I love to see this plugin used by people from other countries. I would be happy 
 
 If you know Java and Bukkit you can take some issue and create pull request. Just let me know and remember these few things:
 
-* The contributed code must be well tested and working (you don't say?)
-* Use only spaces for indentation: 4 spaces instead of regular tab.
-* Wrap your code at 100th column (most of the code should be wrapped).
+* The contributed code should be well tested and fully working.
+* Use only tabs for indentation.
+* Wrap your code at 120th column (most of the code should be wrapped).
 * Comment everything so the code is easy to understand for everyone.
 * Use block comments to document classes, methods and fields.
-* Case statements should be indented with 4 more spaces than a switch statement.
 
 ## Positive feedback
 
