@@ -7,7 +7,7 @@ Now log in and place somewhere in the world a block of stained clay. On top of i
     [NPC]
     Innkeeper
 
-Done. Now right-click on the NPC. The conversation should start. If it did not, check if you correctly built the NPC. Ask the Innkeeper for some quests. He will tell you to cut some trees. If you want, type **/journal** to get the journal and see a new entry. Now, don't try to place any wood blocks. BetonQuest will detect that and increase the number of blocks to destroy. Just go and find some trees. Cut them down and if you're in creative mode, give yourself 16 blocks of wood. Now you can return to Innkeeper and give him the wood. You will receive the reward.
+Done. Now right-click on the NPC's head. The conversation should start. If it did not, check if you correctly built the NPC. Ask the Innkeeper for some quests. He will tell you to cut some trees. If you want, type **/journal** to get the journal and see a new entry. Now, don't try to place any wood blocks. BetonQuest will detect that and increase the number of blocks to destroy. Just go and find some trees. Cut them down and if you're in creative mode, give yourself 16 blocks of wood. Now you can return to Innkeeper and give him the wood. You will receive the reward.
 
 ## Using events and conditions
 
@@ -15,35 +15,68 @@ Now that you know how a (very) simple quest looks like time to start learning ho
 
 ### Events
 
-Let's just open _events.yml_ file inside the _default_ package. At the end add a new line: `foo: message Hello world!` This is an event instruction. BetonQuest will use it to determine what type of event it is and what exactly should it do. `foo` is the name, `message` is the type and `Hello world!` tells the message type what it needs to display. In this case, if you run `foo` event, it will display to you `Hello world!` message. Now save the file, issue **/q reload** command and run the event with **/q e \<name\> foo** command (`q` is shortcut for `quest`, `e` is shortcut for `event`, `<name>` is your Minecraft name without the brackets and `foo` is the name of the event we've just created). It should show you white `Hello world!` message in the chat.
+Let's just open _events.yml_ file inside the _default_ package. At the end add a new line: 
 
-Let's create another event, more complicated one. `teleport` seems complicated enough. As you can read in the _Events list_, it needs a single argument, the location. Press F3 and check out your current location (it's shown on the left, three numbers, `x`, `y` and `z`). Now add in _events.yml_ another line: `bar: location 100;200;300;world` and replace `100` with your `x` coordinate, `200` with `y` and `300` with `z`. `world` needs to be replaced with your current world name. Save the file, reload the plugin and run this event with a command described before.
+    foo: message Hello world!
+
+This is an event instruction. BetonQuest will use it to determine what type of event it is and what exactly should it do. `foo` is the name, `message` is the type and `Hello world!` tells the message type what it needs to display. In this case, if you run `foo` event, it will display to you `Hello world!` message. Now save the file, issue **/q reload** command and run the event with **/q e \<name\> foo** command (`q` is shortcut for `quest`, `e` is shortcut for `event`, `<name>` is your Minecraft name without the brackets and `foo` is the name of the event we've just created). It should show you white `Hello world!` message in the chat.
+
+Let's create another event, more complicated one. `teleport` seems complicated enough. As you can read in the _Events list_, it needs a single argument, the location. Press F3 and check out your current location (it's shown on the left, three numbers, `x`, `y` and `z`). Now add in _events.yml_ another line:
+
+    bar: location 100;200;300;world
+
+and replace `100` with your `x` coordinate, `200` with `y` and `300` with `z`. `world` needs to be replaced with your current world's name. Save the file, reload the plugin and run this event with a command described before. It should teleport you to the location you have specified.
 
 Congratulations, you have just created your first events. Go ahead and do some experiments with other event types. You can find them in _Events list_ chapter. Once you're done let's start learning conditions.
 
 ### Conditions
 
-Open the _conditions.yml_ file and add there a new line: `foo: location 100;200;300;world;5` Can you see how we named the `foo` condition in the same way as the `foo` event? They are not connected in any way. Condition names and event names are separated, so you can give them the same name without any problems. Now let's look at the instruction string. As you can suspect, `location` is a type of the condition. This one means that we'll be ckecking if the player is near that location (you should change the location to the place where you're standing right now, so you don't have to run around the world). Note that at the end of location argument there is an additional number, `5`. This is the maximum distance you can be away from the location to meet the condition. Alright, save the file and reload the plugin.
+Open the _conditions.yml_ file and add there a new line:
+
+    foo: location 100;200;300;world;5
+
+Can you see how we named the `foo` condition in the same way as the `foo` event? They are not connected in any way. Condition names and event names are separated, so you can give them the same name without any problems. Now let's look at the instruction string. As you can suspect, `location` is a type of the condition. This one means that we'll be checking if the player is near that location (you should change the location to the place where you're standing right now, so you don't have to run around the world). Note that at the end of location argument there is an additional number, `5`. This is the maximum distance you can be away from the location to meet the condition. Alright, save the file and reload the plugin.
 
 Now walk to the location you have defined in the condition. Try to stand on the exact block corresponding to that location. Issue **/q c \<name\> foo** command (`c` is shortcut for `condition`). It should show you "checking condition blah blah blah: **true**". We're focusing on that last word, **true**. This means that you're meeting the condition: you're standing withing 5 block radius of the location. Now move 2 blocks away and issue that command again. You should still be meeting the condition. Walk 4 more blocks away and try now. It should show **false**. You are now outside of that 5 block radius. Get it? Great.
 
-Now I'll show you the simplest use of those conditions. Open the _events.yml_ file again, and at the end of `foo` instruction add `conditions:foo` argument. By the way, rename `foo` event to `baz`, so the names won't get confusing. Now you should have something like `bar: message Hello world! conditions:foo`. Now `baz` event will run only if it meets `foo` condition. Reload the plugin, walk outside of the 5 block radius and try to run `baz` event. Puff, nothing happens. It's because you're not meeting `foo` condition. Walk into the radius again and try to run that event now. It should happily display the `Hello world!` message.
+Now I'll show you the simplest use of those conditions. Open the _events.yml_ file again, and at the end of `foo` instruction add `conditions:foo` argument. By the way, rename `foo` event to `baz`, so the names won't get confusing. Now you should have something like
 
-It's very nice that we can add such conditions, but the problem is: what if you wanted to display the message only if the player is _outside_ the radius? Don't worry, you don't have to specify `inverted_location` condition or anything like that. You can simply negate the condition. Negation makes the condition behave in the exact opposite way, in this case it `foo` will be met only if the player is outside of the 5 block radius, and it won't be met if he's inside. Open the _events.yml_ and add an exclamation mark before the `foo` condition, so it looks like `baz: message Hello world! conditions:!foo` This means "display message `Hello world!` if the `foo` condition is _not met_". Save the file, reload the plugin and run the event inside and outside of the radius to see how it works.
+    baz: message Hello world! conditions:foo
+
+Now `baz` event will run only if it meets `foo` condition. Reload the plugin, walk outside of the 5 block radius and try to run `baz` event. Puff, nothing happens. It's because you're not meeting `foo` condition. Walk into the radius again and try to run that event now. It should happily display the `Hello world!` message.
+
+It's very nice that we can add such conditions, but the problem is: what if you wanted to display the message only if the player is _outside_ the radius? Don't worry, you don't have to specify `inverted_location` condition or anything like that. You can simply negate the condition. Negation makes the condition behave in the exact opposite way, in this case it `foo` will be met only if the player is outside of the 5 block radius, and it won't be met if he's inside. Open the _events.yml_ and add an exclamation mark before the `foo` condition, so it looks like
+
+    baz: message Hello world! conditions:!foo
+
+This means "display message `Hello world!` if the `foo` condition is _not met_". Save the file, reload the plugin and run the event inside and outside of the radius to see how it works.
 
 ## Basic tags
 
-Now that you know how to use events and conditions I'll show you what tags are. Create new events, `add_beton_tag: tag add beton` and `del_beton_tag: tag del beton`. It's a good practice to give your events names that describe what they are doing. Imagine you have 100 events, `foo24`, `bar65`, `baz12` etc. You would get lost pretty quickly. So, `add_beton_tag` event here simply adds `beton` tag to the player, `del_beton_tag` removes it. Save the file, reload the plugin and run this event. Nothing happens... or does it? Issue **/q t \<name\>** command (`t` is shortcut for `tags`). It should show you a list with few entries. Right now focus on `default.beton`, the rest are used by the default quest for Innkeeper. Alright, `default` is the name of the package in which the tag is, and `beton` is the name of the tag, as defined in `add_beton_tag` event. Now run `del_beton_tag` event. Guess what, `default.beton` disappeared from the list! And that's it, you know how to add and remove tags. Pretty useless.
+Now that you know how to use events and conditions I'll show you what tags are. Create new events:
 
-Nothing could be more wrong. Tags are one the most powerful things in BetonQuest. They just need to be used with `tag` condition. Open _conditions.yml_ and add `has_beton_tag: tag beton` line. As you can imagine, `tag` is the type of a condition (the same as `tag` event, but these are not the same things - one is an event, the other one is a condition) and `beton` is the name of the tag. You don't have to specify `default.beton`, but you can if you want. Now save, reload and check it with a command. It should show **false**, since you have removed the tag with `del_beton_tag` event. Add it again with `add_beton_tag` event and check the `has_beton_tag` condition again. Now it will show **true**.
+    add_beton_tag: tag add beton
+    del_beton_tag: tag del beton
+
+It's a good practice to give your events names that describe what they are doing. Imagine you have 100 events, `foo24`, `bar65`, `baz12` etc. You would get lost pretty quickly. So, `add_beton_tag` event here simply adds `beton` tag to the player, `del_beton_tag` removes it. Save the file, reload the plugin and run this event. Nothing happens... or does it? Issue **/q t \<name\>** command (`t` is shortcut for `tags`). It should show you a list with few entries. Right now focus on `default.beton`, the rest are used by the default quest for Innkeeper. Alright, `default` is the name of the package in which the tag is, and `beton` is the name of the tag, as defined in `add_beton_tag` event. Now run `del_beton_tag` event. Guess what, `default.beton` disappeared from the list! And that's it, you know how to add and remove tags. Pretty useless.
+
+Nothing could be more wrong. Tags are one the most powerful things in BetonQuest. They just need to be used with `tag` condition. Open _conditions.yml_ and add
+
+    has_beton_tag: tag beton
+
+line. As you can imagine, `tag` is the type of a condition (the same as `tag` event, but these are not the same things - one is an event, the other one is a condition) and `beton` is the name of the tag. You don't have to specify `default.beton`, but you can if you want. Now save, reload and check it with a command. It should show **false**, since you have removed the tag with `del_beton_tag` event. Add it again with `add_beton_tag` event and check the `has_beton_tag` condition again. Now it will show **true**.
 
 Now you probably understand how powerful this system is. You could for example set a tag on the first time the player talks with an NPC, and if the NPC sees that tag next time they talk, he will tell something different, like "welcome back".
 
 ## Creating objectives
 
-Time to write some objectives! Open the _objectives.yml_ file and add a new line: `kill_creepers: mobkill creeper 3 events:bar conditions:has_beton_tag`. Now let's analyze it. `kill_creepers` is a name of the objective. `mobkill` is a type. In this case, to complete the objective the player will have to kill some mobs. `creeper` is a type of the mob, so we know that these mobs will have to be Creepers. `3` is the amount. It means that the player has to kill 3 Creepers. `events:bar` means than once the player kills those Creepers, the `bar` event will be run (it's the teleportation event). `conditions:has_beton_tag` tells us that the player will have to have `beton` tag while killing Creepers to complete the objective. Save it, reload the plugin and issue **/q o \<name\> add kill_creepers** command (`o` is for `objective`, `add` tells the plugin to add an objective).
+Time to write some objectives! Open the _objectives.yml_ file and add a new line:
 
-Now you can check if you actually have this objective with **/q o \<name\>** command, it will show you all your active objectives. It should show `default.kill_creepers`. Alright, remove (yes, remove!) the `beton` tag from you and find some Creepers to kill. Once you killes 3 of them you will notice that nothing happened. It's because `has_beton_tag` condtion is not met, so the objective does not count your progress. Now add the tag again and kill another Creepers. When the third is dead you should be teleported to the location defined in `bar` event.
+    kill_creepers: mobkill creeper 3 events:bar conditions:has_beton_tag
+
+Now let's analyze it. `kill_creepers` is a name of the objective. `mobkill` is a type. In this case, to complete the objective the player will have to kill some mobs. `creeper` is a type of the mob, so we know that these mobs will have to be Creepers. `3` is the amount. It means that the player has to kill 3 Creepers. `events:bar` means than once the player kills those Creepers, the `bar` event will be run (it's the teleportation event). `conditions:has_beton_tag` tells us that the player will have to have `beton` tag while killing Creepers to complete the objective. Save it, reload the plugin and issue **/q o \<name\> add kill_creepers** command (`o` is for `objective`, `add` tells the plugin to add an objective).
+
+Now you can check if you actually have this objective with **/q o \<name\>** command, it will show you all your active objectives. It should show `default.kill_creepers`. Alright, remove (yes, remove!) the `beton` tag from you and find some Creepers to kill. Once you killed 3 of them you will notice that nothing happened. It's because `has_beton_tag` condition is not met, so the objective does not count your progress. Now add the tag again and kill another Creepers. When the third is dead you should be teleported to the location defined in `bar` event.
 
 Congratulations, now you know how to use objectives. You should experiment with other types now, since objectives will be used very often in your quests. Once you're done check out the _Writing your first conversation_ chapter to use your knowledge to write your fisrt conversation.
 
@@ -73,9 +106,24 @@ Guess what, the conversation finished right after it started. The Miner just sai
       bye:
         text: I need to go, sorry.
 
-When you save the file, reload the plugin and start the conversation again you will notice that there are two options for you to choose: `Hello!` and `I need to go, sorry.` Choosing any of them will end the conversation, because these options did not specify any pointers. Now add a new NPC option, for example `weather` with text `Nice weather.` and make `hello` player option point to it. When you save&reload, the Miner should say `Nice weather.` when you tell him `Hello!`. I think you get how it works.
+When you save the file, reload the plugin and start the conversation again you will notice that there are two options for you to choose: `Hello!` and `I need to go, sorry.` Choosing any of them will end the conversation, because these options did not specify any pointers.
 
-Now, everytime you talk to the Miner, he will say the same thing. It would be nice if the second time you talk to him he knew your name. We can do that with tags. Define a `meet_miner` event and `has_met_miner` condition. When you talk to the Miner for the first time, he will check if you have met him. If not, he will meet you (with that event) and next time you talk, the condition will be passed and he will use your name.
+Now add a new NPC option, for example `weather` with text `Nice weather.` and make `hello` player option point to it. When you save&reload, the Miner should say `Nice weather.` when you tell him `Hello!`. I think you get how it works.
+
+    NPC_options:
+      greeting:
+        text: Hi there, traveler!
+        pointers: hello, bye
+      weather:
+        text: Nice weather.
+    player_options:
+      hello:
+        text: Hello!
+        pointer: weather
+      bye:
+        text: I need to go, sorry.
+
+Now, every time you talk to the Miner, he will say the same thing. It would be nice if the second time you talk to him he knew your name. We can do that with tags. Define a `meet_miner` event and `has_met_miner` condition. When you talk to the Miner for the first time, he will check if you have met him. If not, he will meet you (with that event) and next time you talk, the condition will be passed and he will use your name.
 
 Now, rename `greeting` NPC option to `first_greeting`. Add `meet_miner` event and negated `has_met_miner` condition (negated because this option should only show if the player has not met the Miner yet). You will need to surround the condition with `''`, because strings cannot start with exclamation marks in YAML. It should look like this:
 
@@ -87,7 +135,7 @@ Now, rename `greeting` NPC option to `first_greeting`. Add `meet_miner` event an
         event: meet_miner
         pointers: hello, bye 
 
-This means: `first_greeting` should be used if the player **does not** pass `has_met_miner` condition. When this option is used, fire `meet_miner` event and display `hello` and `bye` options. Alright, but what happens if the player met the Miner and now negated `has_met_miner` condition doesn't work? NPC will try to use next option defined in `first` setting. There is none yet, so let's add it.
+This means: `first_greeting` should be used if the player **does not** pass `has_met_miner` condition (meaning he doesn't have a tag because he haven't talked to the NPC yet). When this option is used, it will fire `meet_miner` event and display `hello` and `bye` options. Alright, but what happens if the player met the Miner and now negated `has_met_miner` condition doesn't work? NPC will try to use next option defined in `first` setting. There is none yet, so let's add it.
 
     first: first_greeting,regular_greeting
     NPC_options:
@@ -118,6 +166,6 @@ Here's the whole conversation you created, so you can check if you understood ev
       bye:
         text: I need to go, sorry.
 
-Now you should experiment some more with this conversation, you can help yourself by looking at the _innkeeper.yml_ file. Try to understand how that conversation works step by step. As the excercise you should complete the Miner NPC, so he asks you to mine some iron ore, then smelt it in the furnace, next craft an armor with and return to him wearing this armor.
+Now you should experiment some more with this conversation, you can help yourself by looking at the _innkeeper.yml_ file. Try to understand how that conversation works step by step. As the excercise you should complete the Miner NPC, so he asks you to mine some iron ore, then smelt it in the furnace, next craft an armor with it and return to him wearing this armor.
 
-You might want to check out the _Reference_ chapter to see how to handle items in your quests and how to add entries to the journal. If you want to use Citizens NPCs instead of the ones made with clay you will find information you need in that chapter too. To find out more about events, conditions, objectives, conversations and variables, read the next chapter.
+You might want to check out the _Reference_ chapter to see how to handle items in your quests and how to add entries to the journal. If you want to use Citizens NPCs instead of the ones made with clay you will find information you need in that chapter too. To find out more about events, conditions, objectives and variables, take a look at the appropriate lists (after the _Reference_ chapter).
