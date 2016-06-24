@@ -147,6 +147,7 @@ This option does not have any conditions, so if the `first_greeting` fails, the 
 
 Here's the whole conversation you created, so you can check if you understood everything correctly:
 
+    quester: Miner
     first: first_greeting,regular_greeting
     NPC_options:
       first_greeting:
