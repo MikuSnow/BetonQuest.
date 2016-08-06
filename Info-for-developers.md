@@ -13,16 +13,16 @@ And if you're using Maven simply add this to your _pom.xml_:
 
     <repositories>
         <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
+            <id>betonquest-repo</id>
+            <url>http://betonquest.betoncraft.pl/mvn</url>
         </repository>
     </repositories>
 
     <dependencies>
         <dependency>
-            <groupId>com.github.Co0sh</groupId>
+            <groupId>pl.betoncraft.betonquest</groupId>
             <artifactId>BetonQuest</artifactId>
-            <version>v1.8.2</version>
+            <version>1.8.5</version>
         </dependency>
     </dependencies>
 
