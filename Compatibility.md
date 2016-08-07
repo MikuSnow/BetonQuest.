@@ -18,6 +18,8 @@ The player has to right-click on the NPC with specified ID. It can also optional
 
 **Example**: `npcinteract 3 cancel conditions:sneak events:steal`
 
+_Notice: When you use Citizens, in main.yml you need to specify the ID of the NPC instead of the name!_
+
 ## [Vault](http://dev.bukkit.org/bukkit-plugins/vault/)
 
 By installing Vault you enable Permission event and Money condition/event.
